@@ -1,0 +1,239 @@
+# Portfolio Website
+
+A modern, responsive single-page portfolio website built with HTML, CSS (Tailwind CSS), and JavaScript. This portfolio features interactive persona filtering, project showcases, and a simulated chat interface.
+
+## Features
+
+- **Four Persona Sections**: PM, Consulting, Finance, and Tech with filtered content
+- **Interactive Project Showcase**: Modal-based project displays with screenshots
+- **Pivots & Adversity Section**: Accordion-style storytelling
+- **Beyond the Desk Section**: Personal interests and hobbies
+- **Simulated Chat Interface**: Interactive recruiter chat with pre-set questions
+- **Responsive Design**: Fully optimized for mobile, tablet, and desktop
+- **Modern UI**: Tailwind CSS styling with smooth animations
+
+## File Structure
+
+```
+portfolio/
+├── index.html          # Main HTML file
+├── style.css           # Custom CSS styles
+├── script.js           # JavaScript functionality
+└── README.md          # This file
+```
+
+## Setup Instructions
+
+### 1. Update Personal Information
+
+#### Update Contact Links
+Edit `index.html` and replace the placeholder links:
+
+```html
+<!-- Find these links in the "Get In Touch" section -->
+<a href="https://www.linkedin.com/in/yourprofile" ...>
+<a href="mailto:your.email@example.com" ...>
+```
+
+Replace:
+- `https://www.linkedin.com/in/yourprofile` with your LinkedIn profile URL
+- `your.email@example.com` with your email address
+
+#### Upload Screenshots
+The portfolio includes three screenshot placeholders marked with comments:
+
+1. **Pitch Deck Screenshot** - Look for `<!-- SCREENSHOT_PLACEHOLDER_PITCH_DECK -->`
+2. **Streamlit App Screenshot** - Look for `<!-- SCREENSHOT_PLACEHOLDER_STREAMLIT_APP -->`
+3. **Dashboards Screenshot** - Look for `<!-- SCREENSHOT_PLACEHOLDER_DASHBOARDS -->`
+
+**To upload screenshots:**
+
+1. Create an `images` folder in your portfolio directory:
+   ```
+   portfolio/
+   ├── images/
+   │   ├── pitch-deck-screenshot.png
+   │   ├── streamlit-app-screenshot.png
+   │   └── dashboards-screenshot.png
+   ```
+
+2. Replace the placeholder divs with image tags:
+   ```html
+   <!-- Replace this: -->
+   <div class="w-full h-64 bg-gradient-to-br...">
+       <p>Upload your screenshot here...</p>
+   </div>
+   
+   <!-- With this: -->
+   <div class="screenshot-container">
+       <img src="images/pitch-deck-screenshot.png" alt="Pitch Deck Screenshot" loading="lazy">
+   </div>
+   ```
+
+### 2. Test Locally
+
+1. Open `index.html` in a web browser
+2. Test all interactive features:
+   - Navigation buttons (PM, Consulting, Finance, Tech)
+   - Project showcase modals
+   - Accordion sections
+   - Chat interface
+   - Contact buttons
+
+## Deployment to GitHub Pages
+
+### Method 1: Using GitHub Web Interface
+
+1. **Create a GitHub Repository**
+   - Go to [GitHub](https://github.com) and create a new repository
+   - Name it `portfolio` or `yourname-portfolio`
+   - Make it public (required for free GitHub Pages)
+
+2. **Upload Files**
+   - Click "uploading an existing file"
+   - Drag and drop all files from your `portfolio` folder:
+     - `index.html`
+     - `style.css`
+     - `script.js`
+     - `README.md`
+     - `images/` folder (if you've added screenshots)
+   - Commit the files
+
+3. **Enable GitHub Pages**
+   - Go to your repository settings
+   - Scroll to "Pages" section
+   - Under "Source", select `main` branch (or `master` if that's your default)
+   - Select `/ (root)` folder
+   - Click "Save"
+
+4. **Access Your Site**
+   - Your site will be available at: `https://yourusername.github.io/portfolio/`
+   - It may take a few minutes to go live
+
+### Method 2: Using Git Command Line
+
+1. **Initialize Git Repository**
+   ```bash
+   cd portfolio
+   git init
+   git add .
+   git commit -m "Initial portfolio commit"
+   ```
+
+2. **Create GitHub Repository**
+   - Create a new repository on GitHub (don't initialize with README)
+
+3. **Connect and Push**
+   ```bash
+   git remote add origin https://github.com/yourusername/portfolio.git
+   git branch -M main
+   git push -u origin main
+   ```
+
+4. **Enable GitHub Pages** (same as Method 1, step 3)
+
+### Method 3: Using GitHub Desktop
+
+1. **Create Repository**
+   - Open GitHub Desktop
+   - File → New Repository
+   - Name it and choose local path
+   - Initialize with README (optional)
+
+2. **Add Files**
+   - Copy your portfolio files to the repository folder
+   - GitHub Desktop will detect changes
+   - Write commit message and commit
+
+3. **Publish**
+   - Click "Publish repository"
+   - Make it public
+   - Enable GitHub Pages in repository settings
+
+## Custom Domain (Optional)
+
+To use a custom domain:
+
+1. **Add CNAME File**
+   - Create a file named `CNAME` (no extension) in your repository root
+   - Add your domain: `yourdomain.com`
+
+2. **Update DNS Settings**
+   - In your domain registrar, add a CNAME record:
+     - Name: `www` (or `@` for root domain)
+     - Value: `yourusername.github.io`
+
+3. **Update GitHub Pages Settings**
+   - In repository settings → Pages
+   - Add your custom domain
+
+## Troubleshooting
+
+### Images Not Loading
+- Check that image paths are correct (relative to `index.html`)
+- Ensure images are in the `images/` folder
+- Verify file names match exactly (case-sensitive)
+
+### Styles Not Applying
+- Ensure `style.css` is in the same directory as `index.html`
+- Check browser console for 404 errors
+- Verify Tailwind CDN is loading (check network tab)
+
+### GitHub Pages Not Updating
+- Wait 5-10 minutes for changes to propagate
+- Clear browser cache (Ctrl+F5 or Cmd+Shift+R)
+- Check repository settings → Pages for build status
+
+### Chat Interface Not Working
+- Ensure `script.js` is loaded (check browser console)
+- Verify all JavaScript files are in the correct location
+
+## Browser Support
+
+- Chrome/Edge (latest)
+- Firefox (latest)
+- Safari (latest)
+- Mobile browsers (iOS Safari, Chrome Mobile)
+
+## Performance Tips
+
+1. **Optimize Images**
+   - Compress screenshots before uploading
+   - Use WebP format for better compression
+   - Recommended max width: 1200px
+
+2. **Lazy Loading**
+   - Images already use `loading="lazy"` attribute
+   - This improves initial page load time
+
+3. **CDN Usage**
+   - Tailwind CSS loads from CDN (fast)
+   - No additional build step required
+
+## Maintenance
+
+### Updating Content
+- Edit `index.html` directly
+- Changes will reflect after pushing to GitHub
+- GitHub Pages updates automatically
+
+### Adding New Projects
+- Add new project cards in the Project Showcase section
+- Update `projectData` object in `script.js`
+- Add corresponding modal content
+
+## License
+
+This portfolio template is free to use and modify for personal or commercial projects.
+
+## Support
+
+For issues or questions:
+- Check browser console for errors
+- Verify all file paths are correct
+- Ensure GitHub Pages is enabled in repository settings
+
+---
+
+**Note**: Remember to replace all placeholder content (LinkedIn URL, email, screenshots) before deploying!
+
