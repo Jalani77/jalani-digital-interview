@@ -1,0 +1,549 @@
+/* Landing Page Button Styles */
+.landing-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 3rem 2rem;
+    background: white;
+    border: 3px solid #dc2626;
+    border-radius: 1rem;
+    color: #dc2626;
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.landing-btn:hover {
+    background: linear-gradient(to bottom right, #dc2626, #b91c1c);
+    color: white;
+    transform: translateY(-4px) scale(1.05);
+    box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.3), 0 10px 10px -5px rgba(220, 38, 38, 0.2);
+}
+
+.landing-btn:active {
+    transform: translateY(-2px) scale(1.02);
+}
+
+.landing-btn svg {
+    stroke-width: 2.5;
+}
+
+/* Navigation Button Styles */
+.nav-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 1.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: 0.75rem;
+    transition: all 0.3s ease-in-out;
+    background: white;
+    color: #dc2626;
+    box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+    border: 2px solid transparent;
+    cursor: pointer;
+}
+
+@media (min-width: 640px) {
+    .nav-btn {
+        padding: 1.25rem 2rem;
+        font-size: 1.25rem;
+    }
+}
+
+.nav-btn:hover {
+    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+    transform: translateY(-4px) scale(1.05);
+}
+
+.nav-btn:active {
+    transform: scale(0.95);
+}
+
+/* PM Button - Red theme */
+.nav-btn[data-filter="pm"]:hover {
+    background: linear-gradient(to right, #dc2626, #b91c1c);
+    color: white;
+    border-color: #b91c1c;
+}
+
+.nav-btn[data-filter="pm"].active {
+    background: linear-gradient(to right, #dc2626, #b91c1c);
+    color: white;
+    border-color: #b91c1c;
+    box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.3), 0 10px 10px -5px rgba(220, 38, 38, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Consulting Button - Red theme */
+.nav-btn[data-filter="consulting"]:hover {
+    background: linear-gradient(to right, #dc2626, #b91c1c);
+    color: white;
+    border-color: #b91c1c;
+}
+
+.nav-btn[data-filter="consulting"].active {
+    background: linear-gradient(to right, #dc2626, #b91c1c);
+    color: white;
+    border-color: #b91c1c;
+    box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.3), 0 10px 10px -5px rgba(220, 38, 38, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Finance Button - Red theme */
+.nav-btn[data-filter="finance"]:hover {
+    background: linear-gradient(to right, #dc2626, #b91c1c);
+    color: white;
+    border-color: #b91c1c;
+}
+
+.nav-btn[data-filter="finance"].active {
+    background: linear-gradient(to right, #dc2626, #b91c1c);
+    color: white;
+    border-color: #b91c1c;
+    box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.3), 0 10px 10px -5px rgba(220, 38, 38, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Tech Button - Red theme */
+.nav-btn[data-filter="tech"]:hover {
+    background: linear-gradient(to right, #dc2626, #b91c1c);
+    color: white;
+    border-color: #b91c1c;
+}
+
+.nav-btn[data-filter="tech"].active {
+    background: linear-gradient(to right, #dc2626, #b91c1c);
+    color: white;
+    border-color: #b91c1c;
+    box-shadow: 0 20px 25px -5px rgba(220, 38, 38, 0.3), 0 10px 10px -5px rgba(220, 38, 38, 0.2);
+    transform: translateY(-2px);
+}
+
+/* Content Section Styles */
+.content-section {
+    display: none;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 0.5s ease-in-out, transform 0.5s ease-in-out;
+}
+
+.content-section.active {
+    display: block;
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 0.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Accordion Styles */
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+    opacity: 0;
+}
+
+.accordion-content.show {
+    max-height: 500px;
+    opacity: 1;
+    transition: max-height 0.4s ease-in, opacity 0.4s ease-in;
+}
+
+.accordion-header svg {
+    transition: transform 0.3s ease;
+}
+
+.accordion-header.active svg {
+    transform: rotate(180deg);
+}
+
+/* Performance Optimizations */
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Optimize image rendering */
+img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: crisp-edges;
+}
+
+/* Reduce layout shifts with aspect ratio */
+.screenshot-container,
+.chat-image,
+#modalImage {
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+}
+
+/* Smooth scrolling */
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(220, 38, 38, 0.5);
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(220, 38, 38, 0.7);
+}
+
+/* Modal Styles */
+.modal {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.modal.show {
+    display: flex;
+    opacity: 1;
+}
+
+.modal-content {
+    transform: scale(0.9) translateY(20px);
+    transition: transform 0.3s ease;
+}
+
+.modal.show .modal-content {
+    transform: scale(1) translateY(0);
+}
+
+/* Project Card Styles */
+.project-card {
+    transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Placeholder image styling */
+#modalImage {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+#modalImage::before {
+    content: "📸 Screenshot Placeholder";
+    display: block;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Modal button hover effects */
+#liveVisualBtn:hover,
+#codeSnippetBtn:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive modal adjustments */
+@media (max-width: 640px) {
+    .modal-content {
+        margin: 1rem;
+        max-height: 95vh;
+    }
+    
+    #modalImage {
+        height: 200px;
+    }
+}
+
+/* Chat Window Styles */
+#chatWindow {
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+    height: 600px;
+    max-height: calc(100vh - 120px);
+}
+
+#chatWindow.show {
+    display: flex !important;
+    animation: slideUp 0.3s ease-out;
+}
+
+@keyframes slideUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Chat Messages Area - Ensure proper scrolling */
+#chatMessages {
+    flex: 1;
+    overflow-y: auto;
+    overflow-x: hidden;
+    min-height: 0; /* Important for flex scrolling */
+}
+
+/* Smooth scrolling for chat */
+#chatMessages {
+    scroll-behavior: smooth;
+}
+
+/* Chat Message Bubbles - iMessage/WhatsApp Style */
+#chatMessages .flex {
+    animation: fadeInMessage 0.3s ease-in;
+}
+
+@keyframes fadeInMessage {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Typing Indicator Animation */
+.typing-indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    padding: 0.5rem 0;
+}
+
+.typing-dot {
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #666;
+    border-radius: 50%;
+    animation: typing 1.4s infinite;
+}
+
+.typing-dot:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.typing-dot:nth-child(3) {
+    animation-delay: 0.4s;
+}
+
+@keyframes typing {
+    0%, 60%, 100% {
+        transform: translateY(0);
+        opacity: 0.7;
+    }
+    30% {
+        transform: translateY(-8px);
+        opacity: 1;
+    }
+}
+
+/* Chat Image Styling */
+#chatMessages img {
+    max-width: 100%;
+    border-radius: 0.5rem;
+    margin-top: 0.5rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    display: block;
+}
+
+/* Chat Link Styling */
+#chatMessages a {
+    color: inherit;
+    text-decoration: underline;
+    transition: opacity 0.2s;
+}
+
+#chatMessages a:hover {
+    opacity: 0.8;
+}
+
+/* Chat Button Styling */
+.chat-action-btn {
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.chat-action-btn:active {
+    transform: scale(0.98);
+}
+
+.chat-action-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Quick Button Hover Effects */
+.quick-btn {
+    transition: all 0.2s ease;
+}
+
+.quick-btn:hover {
+    transform: translateX(4px);
+}
+
+.quick-btn:active {
+    transform: scale(0.98);
+}
+
+/* Floating Action Button Animation */
+#chatFAB {
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 0 0 0 rgba(99, 102, 241, 0.7);
+    }
+    50% {
+        box-shadow: 0 0 0 10px rgba(99, 102, 241, 0);
+    }
+}
+
+/* Scrollbar for chat messages */
+#chatMessages::-webkit-scrollbar {
+    width: 6px;
+}
+
+#chatMessages::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#chatMessages::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+}
+
+#chatMessages::-webkit-scrollbar-thumb:hover {
+    background: rgba(0, 0, 0, 0.3);
+}
+
+/* Responsive Chat Window */
+@media (max-width: 640px) {
+    #chatWindow {
+        width: calc(100vw - 3rem);
+        height: calc(100vh - 8rem);
+        bottom: 5rem;
+        right: 1.5rem;
+    }
+    
+    #chatFAB {
+        bottom: 1.5rem;
+        right: 1.5rem;
+        width: 3.5rem;
+        height: 3.5rem;
+    }
+}
+
+/* Contact Button Styles */
+.contact-btn {
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 200px;
+}
+
+.contact-btn:hover {
+    text-decoration: none;
+}
+
+.linkedin-btn:focus,
+.email-btn:focus {
+    outline: 2px solid rgba(99, 102, 241, 0.5);
+    outline-offset: 2px;
+}
+
+/* Prevent Layout Shifts - Image Loading */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Aspect Ratio Containers for Screenshots */
+.screenshot-container {
+    position: relative;
+    width: 100%;
+    padding-bottom: 75%; /* 4:3 aspect ratio */
+    overflow: hidden;
+    border-radius: 0.5rem;
+}
+
+.screenshot-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Responsive Improvements */
+@media (max-width: 768px) {
+    .contact-btn {
+        min-width: 100%;
+        width: 100%;
+    }
+    
+    /* Ensure proper spacing on mobile */
+    .max-w-6xl {
+        padding-left: 1rem;
+        padding-right: 1rem;
+    }
+}
+
+/* Loading State for Images */
+img[src=""],
+img:not([src]) {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+img[src]:not([src=""]) {
+    opacity: 1;
+}
+
+/* Smooth Transitions to Prevent Layout Shifts */
+.content-section,
+.accordion-content,
+.modal-content {
+    will-change: transform, opacity;
+}
+
+/* Ensure fixed elements don't cause layout shifts */
+#chatFAB,
+#chatWindow {
+    position: fixed;
+    contain: layout style paint;
+}
