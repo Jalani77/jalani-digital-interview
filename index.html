@@ -1,0 +1,844 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- Primary Meta Tags -->
+    <title>Jalani Bandele | Product & Strategy Portfolio</title>
+    <meta name="title" content="Jalani Bandele | Product & Strategy Portfolio">
+    <meta name="description" content="Interactive portfolio featuring live AI tools, growth metrics at Perplexity, and financial strategy models.">
+    
+    <!-- Open Graph / Facebook -->
+    <!-- NOTE: Update og:url and og:image URLs after deploying to GitHub Pages -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://yourusername.github.io/portfolio/">
+    <meta property="og:title" content="Jalani Bandele | Product & Strategy Portfolio">
+    <meta property="og:description" content="Interactive portfolio featuring live AI tools, growth metrics at Perplexity, and financial strategy models.">
+    <!-- OG_IMAGE_PLACEHOLDER: Replace with your actual landing page screenshot URL -->
+    <meta property="og:image" content="https://yourusername.github.io/portfolio/images/og-image.png">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:image:alt" content="Jalani Bandele Portfolio Landing Page">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://yourusername.github.io/portfolio/">
+    <meta property="twitter:title" content="Jalani Bandele | Product & Strategy Portfolio">
+    <meta property="twitter:description" content="Interactive portfolio featuring live AI tools, growth metrics at Perplexity, and financial strategy models.">
+    <!-- TWITTER_IMAGE_PLACEHOLDER: Replace with your actual landing page screenshot URL -->
+    <meta property="twitter:image" content="https://yourusername.github.io/portfolio/images/og-image.png">
+    <meta property="twitter:image:alt" content="Jalani Bandele Portfolio Landing Page">
+    
+    <!-- Favicon -->
+    <!-- FAVICON_PLACEHOLDER -->
+    <!-- Replace the line below with your favicon.ico file path -->
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+    
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Heroicons for icons -->
+    <script src="https://unpkg.com/heroicons@2.0.18/24/outline/index.js" type="module"></script>
+</head>
+<body class="bg-gradient-to-br from-indigo-600 via-purple-600 to-pink-500 min-h-screen">
+    <!-- High-Prominence Navigation Bar -->
+    <nav class="sticky top-0 z-50 bg-white/95 backdrop-blur-md shadow-xl border-b-4 border-indigo-500">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col sm:flex-row gap-2 sm:gap-4 py-4">
+                <button class="nav-btn active group" data-filter="pm">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    <span class="font-bold">PM</span>
+                </button>
+                <button class="nav-btn group" data-filter="consulting">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                    <span class="font-bold">Consulting</span>
+                </button>
+                <button class="nav-btn group" data-filter="finance">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                    <span class="font-bold">Finance</span>
+                </button>
+                <button class="nav-btn group" data-filter="tech">
+                    <svg class="w-6 h-6 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                    <span class="font-bold">Tech</span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
+        <!-- Content Sections -->
+        <div id="pm-content" class="content-section active">
+            <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 13.255A23.931 23.931 0 0112 15c-3.183 0-6.22-.62-9-1.745M16 6V4a2 2 0 00-2-2h-4a2 2 0 00-2 2v2m4 6h.01M5 20h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    Elevator Pitch: Agile Product Leader Delivering MVPs Through Cross-Functional Sprint Execution
+                </h2>
+                
+                <!-- Project Showcase Grid -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Project Showcase</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Hackathon Logic Card -->
+                        <div class="project-card group cursor-pointer" data-project="hackathon-logic">
+                            <div class="bg-gradient-to-br from-indigo-100 to-purple-100 rounded-xl p-6 h-full transition-all duration-300 hover:shadow-xl hover:scale-105">
+                                <div class="flex items-center justify-center mb-4 h-32 bg-white rounded-lg">
+                                    <svg class="w-16 h-16 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Hackathon Logic</h4>
+                                <p class="text-gray-600 text-sm">Biometric hardware MVP with ML integration for real-time analytics</p>
+                                <div class="mt-4 flex items-center text-indigo-600 font-semibold">
+                                    <span>View Details</span>
+                                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Growth Dashboard Card -->
+                        <div class="project-card group cursor-pointer" data-project="growth-dashboard">
+                            <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-6 h-full transition-all duration-300 hover:shadow-xl hover:scale-105">
+                                <div class="flex items-center justify-center mb-4 h-32 bg-white rounded-lg">
+                                    <svg class="w-16 h-16 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Growth Dashboard</h4>
+                                <p class="text-gray-600 text-sm">Analytics platform tracking user growth and engagement metrics</p>
+                                <div class="mt-4 flex items-center text-purple-600 font-semibold">
+                                    <span>View Details</span>
+                                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Live AI Tool Card -->
+                        <div class="project-card group cursor-pointer" data-project="live-ai-tool">
+                            <div class="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl p-6 h-full transition-all duration-300 hover:shadow-xl hover:scale-105">
+                                <div class="flex items-center justify-center mb-4 h-32 bg-white rounded-lg">
+                                    <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Live AI Tool</h4>
+                                <p class="text-gray-600 text-sm">AI-powered recruitment platform with real-time candidate matching</p>
+                                <div class="mt-4 flex items-center text-blue-600 font-semibold">
+                                    <span>View Details</span>
+                                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Perplexity | Product & Growth Campus Partner</h3>
+                    <ul class="space-y-3 text-lg text-gray-700 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Executed strategic on-campus marketing initiatives and events to drive product adoption and penetration of Perplexity's Comet tool, leading 30% MoM active user growth
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Developed and launched iterative content strategies, optimizing for user retention and boosting product utility across key departments through agile deployment cycles
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Microsoft Ignite Competition | Software Engineer</h3>
+                    <ul class="space-y-3 text-lg text-gray-700">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Developed product roadmap and user experience strategy for a "student-first" project management tool, focusing on reducing cognitive load and centralizing course deliverables through iterative sprint planning
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-8 p-4 bg-indigo-50 rounded-lg">
+                    <p class="text-lg font-semibold text-indigo-800 mb-2">Certifications & Methodologies:</p>
+                    <p class="text-gray-700">AWS Certified Cloud Practitioner • Lean Six Sigma • Agile (Scrum) & Project Management</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="consulting-content" class="content-section">
+            <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                    </svg>
+                    Elevator Pitch: Strategic Consultant Driving Digital Transformation Through Market Sizing and Process Optimization
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">McKinsey & Company | Forward Learning Program</h3>
+                    <ul class="space-y-3 text-lg text-gray-700 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Completed selective global learning program focused on problem-solving frameworks, business strategy, and digital transformation methodologies designed and delivered by McKinsey consultants
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Black Venture Capital Consortium (BVCC) | Venture Capital Fellow</h3>
+                    <ul class="space-y-3 text-lg text-gray-700 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Applied due diligence fundamentals including market sizing analysis, calculating Total Addressable Market (TAM), and developing comprehensive investment memos in a highly selective 10-week Venture Capital curriculum
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">CampusXatl | Founder</h3>
+                    <ul class="space-y-3 text-lg text-gray-700 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Pivoted entire product strategy and validation framework following an initial GTM stall, cutting time-to-launch timeline by 40% through process optimization and strategic roadmap restructuring
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Conducted market sizing and validation analysis to secure 170 beta users, demonstrating early market viability and establishing foundation for scalable, low-CAC pipeline
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Perplexity | Product & Growth Campus Partner</h3>
+                    <ul class="space-y-3 text-lg text-gray-700 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Developed and launched iterative content strategies, optimizing for user retention and boosting product utility across key departments through strategic go-to-market execution
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Spearheaded outreach generating 20+ high-quality product leads and leading 30% MoM active user growth through strategic market penetration initiatives
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Freelance Photographer & Marketing Strategist</h3>
+                    <ul class="space-y-3 text-lg text-gray-700">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Executed grassroots marketing campaign by photographing over 700 students at no cost, strategically utilizing their social networks to drive brand visibility and lead generation through cost reduction optimization
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-8 p-4 bg-indigo-50 rounded-lg">
+                    <p class="text-lg font-semibold text-indigo-800 mb-2">Core Consulting Skills:</p>
+                    <p class="text-gray-700">Go-to-Market (GTM) Strategy • Market Sizing & TAM Analysis • Cost Reduction & Optimization • Business Strategy • Problem-Solving Frameworks</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="finance-content" class="content-section">
+            <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 7h8m0 0v8m0-8l-8 8-4-4-6 6"></path>
+                    </svg>
+                    Elevator Pitch: Investment Analyst Specializing in Financial Modeling, Market Analysis, and Deal Lifecycle Evaluation
+                </h2>
+                
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Barclays Investment Banking Discovery Program</h3>
+                    <ul class="space-y-3 text-lg text-gray-700 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Selected to participate in highly competitive diversity and inclusion program, gaining immersive exposure to core investment banking divisions including Global Capital Markets and Mergers & Acquisitions
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Engaged in technical workshops focused on financial valuation methods, deal lifecycle analysis, and market analysis, building foundational understanding of complex financial transactions
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Networked directly with Analysts and Managing Directors to gain insights into strategic advisory process and operational structure of top-tier global financial institution
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Black Venture Capital Consortium (BVCC) | Venture Capital Fellow</h3>
+                    <ul class="space-y-3 text-lg text-gray-700 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Applied due diligence fundamentals including market analysis, calculating Total Addressable Market (TAM), and developing comprehensive investment memos in highly selective 10-week Venture Capital curriculum
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">CampusXatl | Founder</h3>
+                    <ul class="space-y-3 text-lg text-gray-700 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Drove critical early-stage adoption by designing and launching GSU's first student marketplace (MVP), securing 170 beta users through targeted campus outreach and displaying early market viability through financial modeling
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-8 p-4 bg-indigo-50 rounded-lg">
+                    <p class="text-lg font-semibold text-indigo-800 mb-2">Financial Expertise:</p>
+                    <p class="text-gray-700">Financial Modeling • Market Analysis • Deal Lifecycle • Investment Memos • TAM Calculation • Due Diligence • Valuation Methods</p>
+                </div>
+            </div>
+        </div>
+
+        <div id="tech-content" class="content-section">
+            <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                    </svg>
+                    Elevator Pitch: Full-Stack Engineer Deploying Cloud-Native Solutions with AI/ML Architecture and Mobile Development
+                </h2>
+                
+                <!-- Project Showcase Grid -->
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-6">Project Showcase</h3>
+                    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                        <!-- Hackathon Logic Card -->
+                        <div class="project-card group cursor-pointer" data-project="hackathon-logic">
+                            <div class="bg-gradient-to-br from-indigo-100 to-purple-100 rounded-xl p-6 h-full transition-all duration-300 hover:shadow-xl hover:scale-105">
+                                <div class="flex items-center justify-center mb-4 h-32 bg-white rounded-lg">
+                                    <svg class="w-16 h-16 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Hackathon Logic</h4>
+                                <p class="text-gray-600 text-sm">Biometric hardware MVP with ML integration for real-time analytics</p>
+                                <div class="mt-4 flex items-center text-indigo-600 font-semibold">
+                                    <span>View Details</span>
+                                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Growth Dashboard Card -->
+                        <div class="project-card group cursor-pointer" data-project="growth-dashboard">
+                            <div class="bg-gradient-to-br from-purple-100 to-pink-100 rounded-xl p-6 h-full transition-all duration-300 hover:shadow-xl hover:scale-105">
+                                <div class="flex items-center justify-center mb-4 h-32 bg-white rounded-lg">
+                                    <svg class="w-16 h-16 text-purple-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Growth Dashboard</h4>
+                                <p class="text-gray-600 text-sm">Analytics platform tracking user growth and engagement metrics</p>
+                                <div class="mt-4 flex items-center text-purple-600 font-semibold">
+                                    <span>View Details</span>
+                                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Live AI Tool Card -->
+                        <div class="project-card group cursor-pointer" data-project="live-ai-tool">
+                            <div class="bg-gradient-to-br from-blue-100 to-cyan-100 rounded-xl p-6 h-full transition-all duration-300 hover:shadow-xl hover:scale-105">
+                                <div class="flex items-center justify-center mb-4 h-32 bg-white rounded-lg">
+                                    <svg class="w-16 h-16 text-blue-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.663 17h4.673M12 3v1m6.364 1.636l-.707.707M21 12h-1M4 12H3m3.343-5.657l-.707-.707m2.828 9.9a5 5 0 117.072 0l-.548.547A3.374 3.374 0 0014 18.469V19a2 2 0 11-4 0v-.531c0-.895-.356-1.754-.988-2.386l-.548-.547z"></path>
+                                    </svg>
+                                </div>
+                                <h4 class="text-xl font-bold text-gray-800 mb-2">Live AI Tool</h4>
+                                <p class="text-gray-600 text-sm">AI-powered recruitment platform with real-time candidate matching</p>
+                                <div class="mt-4 flex items-center text-blue-600 font-semibold">
+                                    <span>View Details</span>
+                                    <svg class="w-5 h-5 ml-2 transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">CampusXatl | Founder</h3>
+                    <ul class="space-y-3 text-lg text-gray-700 mb-6">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Drove critical early-stage adoption by designing and launching GSU's first student marketplace (MVP), securing 170 beta users through targeted campus outreach and displaying early market viability
+                        </li>
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Bypassed high-cost traditional lead sources to launch scrappy, direct-outreach prospecting model, securing 100 daily sign-ups and establishing foundation for scalable, low-CAC pipeline deployment
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mb-8">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">Perplexity | Product & Growth Campus Partner</h3>
+                    <ul class="space-y-3 text-lg text-gray-700">
+                        <li class="flex items-start">
+                            <svg class="w-6 h-6 text-indigo-500 mr-2 mt-0.5 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 13l4 4L19 7"></path>
+                            </svg>
+                            Executed strategic on-campus marketing initiatives and events to drive adoption and penetration of Perplexity's Comet tool, leading 30% MoM active user growth through product deployment strategies
+                        </li>
+                    </ul>
+                </div>
+
+                <div class="mt-8 p-4 bg-indigo-50 rounded-lg">
+                    <p class="text-lg font-semibold text-indigo-800 mb-2">Technical Stack & Certifications:</p>
+                    <p class="text-gray-700 mb-2"><strong>Cloud & DevOps:</strong> AWS Certified Cloud Practitioner • Cloud Services (AWS) • SQL • Git</p>
+                    <p class="text-gray-700 mb-2"><strong>Development:</strong> Mobile Development (iOS, Swift) • Generative AI (LLM) Architecture</p>
+                    <p class="text-gray-700"><strong>Tools:</strong> Figma • PowerBI • Tableau • Slack • Salesforce</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screenshots Section - Pitch Deck, Streamlit App, Dashboards -->
+        <div class="mt-8 sm:mt-12">
+            <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    Portfolio Screenshots
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Pitch Deck Screenshot -->
+                    <div class="bg-gray-50 rounded-xl p-4 border-2 border-dashed border-gray-300">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Pitch Deck</h3>
+                        <!-- SCREENSHOT_PLACEHOLDER_PITCH_DECK -->
+                        <!-- 
+                        TO UPLOAD: Replace the div below with:
+                        <div class="screenshot-container">
+                            <img src="images/pitch-deck-screenshot.png" alt="Pitch Deck Screenshot" loading="lazy">
+                        </div>
+                        -->
+                        <div class="w-full h-64 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center">
+                            <p class="text-gray-500 text-sm text-center px-4">Upload your Pitch Deck screenshot here<br>(Replace SCREENSHOT_PLACEHOLDER_PITCH_DECK)</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Streamlit App Screenshot -->
+                    <div class="bg-gray-50 rounded-xl p-4 border-2 border-dashed border-gray-300">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Streamlit App</h3>
+                        <!-- SCREENSHOT_PLACEHOLDER_STREAMLIT_APP -->
+                        <!-- 
+                        TO UPLOAD: Replace the div below with:
+                        <div class="screenshot-container">
+                            <img src="images/streamlit-app-screenshot.png" alt="Streamlit App Screenshot" loading="lazy">
+                        </div>
+                        -->
+                        <div class="w-full h-64 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center">
+                            <p class="text-gray-500 text-sm text-center px-4">Upload your Streamlit App screenshot here<br>(Replace SCREENSHOT_PLACEHOLDER_STREAMLIT_APP)</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Dashboards Screenshot -->
+                    <div class="bg-gray-50 rounded-xl p-4 border-2 border-dashed border-gray-300">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Dashboards</h3>
+                        <!-- SCREENSHOT_PLACEHOLDER_DASHBOARDS -->
+                        <!-- 
+                        TO UPLOAD: Replace the div below with:
+                        <div class="screenshot-container">
+                            <img src="images/dashboards-screenshot.png" alt="Dashboards Screenshot" loading="lazy">
+                        </div>
+                        -->
+                        <div class="w-full h-64 bg-gradient-to-br from-pink-100 to-indigo-100 rounded-lg flex items-center justify-center">
+                            <p class="text-gray-500 text-sm text-center px-4">Upload your Dashboards screenshot here<br>(Replace SCREENSHOT_PLACEHOLDER_DASHBOARDS)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="mt-8 sm:mt-12">
+            <div class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12 border-2 border-indigo-200">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    Get In Touch
+                </h2>
+                <p class="text-lg text-gray-700 mb-6">Let's connect! Feel free to reach out via LinkedIn or Email.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="contact-btn linkedin-btn flex items-center justify-center px-6 py-3 bg-[#0077b5] text-white font-semibold rounded-lg hover:bg-[#005885] transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        Connect on LinkedIn
+                    </a>
+                    <a href="mailto:your.email@example.com" class="contact-btn email-btn flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        Send Email
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Pivots & Adversity Accordion Section -->
+        <div class="mt-8 sm:mt-12">
+            <div class="bg-gradient-to-br from-amber-50 via-orange-50 to-red-50 rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12 border-2 border-amber-200">
+                <h2 class="text-3xl sm:text-4xl font-bold text-orange-700 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 4v5h.582m15.356 2A8.001 8.001 0 004.582 9m0 0H9m11 11v-5h-.581m0 0a8.003 8.003 0 01-15.357-2m15.357 2H15"></path>
+                    </svg>
+                    Pivots & Adversity
+                </h2>
+                <p class="text-lg text-orange-800 mb-6 italic">Stories of resilience, adaptation, and turning challenges into opportunities</p>
+                <div class="space-y-4">
+                    <div class="accordion-item">
+                        <button class="accordion-header w-full text-left" data-accordion="pivot-campusxatl">
+                            <div class="flex items-center justify-between p-5 bg-white hover:bg-orange-50 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg border-l-4 border-orange-500">
+                                <div class="flex items-center">
+                                    <svg class="w-6 h-6 text-orange-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7h12m0 0l-4-4m4 4l-4 4m0 6H4m0 0l4 4m-4-4l4-4"></path>
+                                    </svg>
+                                    <span class="font-bold text-lg text-gray-800">Pivoting CampusXATL</span>
+                                </div>
+                                <svg id="pivot-campusxatl-icon" class="w-5 h-5 text-orange-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div id="pivot-campusxatl-content" class="accordion-content hidden">
+                            <div class="p-5 pt-3 bg-white rounded-b-xl border-l-4 border-orange-500">
+                                <p class="text-gray-700 leading-relaxed text-lg">
+                                    When CampusXATL hit a GTM stall with our initial go-to-market strategy, I recognized the need for a strategic pivot. Instead of continuing down an ineffective path, I completely redesigned our approach to user acquisition. By shifting from high-cost traditional lead sources to a scrappy, direct-outreach prospecting model, we not only bypassed expensive channels but also established a more authentic connection with our target users. This pivot resulted in securing <strong class="text-orange-600">100 daily sign-ups</strong> and laid the foundation for a scalable, low-CAC pipeline that transformed our growth trajectory.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="accordion-item">
+                        <button class="accordion-header w-full text-left" data-accordion="pivot-hackathon">
+                            <div class="flex items-center justify-between p-5 bg-white hover:bg-orange-50 rounded-xl transition-all duration-300 shadow-md hover:shadow-lg border-l-4 border-orange-500">
+                                <div class="flex items-center">
+                                    <svg class="w-6 h-6 text-orange-600 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                                    </svg>
+                                    <span class="font-bold text-lg text-gray-800">Hackathon Technical Block</span>
+                                </div>
+                                <svg id="pivot-hackathon-icon" class="w-5 h-5 text-orange-600 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+                                </svg>
+                            </div>
+                        </button>
+                        <div id="pivot-hackathon-content" class="accordion-content hidden">
+                            <div class="p-5 pt-3 bg-white rounded-b-xl border-l-4 border-orange-500">
+                                <p class="text-gray-700 leading-relaxed text-lg">
+                                    During the Georgia Tech AI Hackathon, we encountered a critical technical block with our ML model that threatened to derail our entire MVP. With only hours remaining in the 72-hour sprint, I made the decisive call to pivot from our complex machine learning approach to a rule-based logic system. This strategic shift allowed us to maintain the core functionality of our biometric hardware MVP while ensuring we could deliver a working prototype. The pivot not only saved our project but also demonstrated my ability to make quick, pragmatic decisions under pressure. We successfully decoded live heart-rate signals and delivered actionable analytics for Fortune 500 entertainment clients, proving that sometimes the best solution is the one that works.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Screenshots Section - Pitch Deck, Streamlit App, Dashboards -->
+        <div class="mt-8 sm:mt-12">
+            <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
+                    </svg>
+                    Portfolio Screenshots
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Pitch Deck Screenshot -->
+                    <div class="bg-gray-50 rounded-xl p-4 border-2 border-dashed border-gray-300">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Pitch Deck</h3>
+                        <!-- SCREENSHOT_PLACEHOLDER_PITCH_DECK -->
+                        <!-- 
+                        TO UPLOAD: Replace the div below with:
+                        <div class="screenshot-container">
+                            <img src="images/pitch-deck-screenshot.png" alt="Pitch Deck Screenshot" loading="lazy">
+                        </div>
+                        -->
+                        <div class="w-full h-64 bg-gradient-to-br from-indigo-100 to-purple-100 rounded-lg flex items-center justify-center">
+                            <p class="text-gray-500 text-sm text-center px-4">Upload your Pitch Deck screenshot here<br>(Replace SCREENSHOT_PLACEHOLDER_PITCH_DECK)</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Streamlit App Screenshot -->
+                    <div class="bg-gray-50 rounded-xl p-4 border-2 border-dashed border-gray-300">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Streamlit App</h3>
+                        <!-- SCREENSHOT_PLACEHOLDER_STREAMLIT_APP -->
+                        <!-- 
+                        TO UPLOAD: Replace the div below with:
+                        <div class="screenshot-container">
+                            <img src="images/streamlit-app-screenshot.png" alt="Streamlit App Screenshot" loading="lazy">
+                        </div>
+                        -->
+                        <div class="w-full h-64 bg-gradient-to-br from-purple-100 to-pink-100 rounded-lg flex items-center justify-center">
+                            <p class="text-gray-500 text-sm text-center px-4">Upload your Streamlit App screenshot here<br>(Replace SCREENSHOT_PLACEHOLDER_STREAMLIT_APP)</p>
+                        </div>
+                    </div>
+                    
+                    <!-- Dashboards Screenshot -->
+                    <div class="bg-gray-50 rounded-xl p-4 border-2 border-dashed border-gray-300">
+                        <h3 class="text-lg font-semibold text-gray-700 mb-3">Dashboards</h3>
+                        <!-- SCREENSHOT_PLACEHOLDER_DASHBOARDS -->
+                        <!-- 
+                        TO UPLOAD: Replace the div below with:
+                        <div class="screenshot-container">
+                            <img src="images/dashboards-screenshot.png" alt="Dashboards Screenshot" loading="lazy">
+                        </div>
+                        -->
+                        <div class="w-full h-64 bg-gradient-to-br from-pink-100 to-indigo-100 rounded-lg flex items-center justify-center">
+                            <p class="text-gray-500 text-sm text-center px-4">Upload your Dashboards screenshot here<br>(Replace SCREENSHOT_PLACEHOLDER_DASHBOARDS)</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Contact Section -->
+        <div class="mt-8 sm:mt-12">
+            <div class="bg-gradient-to-br from-indigo-50 via-purple-50 to-pink-50 rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12 border-2 border-indigo-200">
+                <h2 class="text-3xl sm:text-4xl font-bold text-indigo-600 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                    </svg>
+                    Get In Touch
+                </h2>
+                <p class="text-lg text-gray-700 mb-6">Let's connect! Feel free to reach out via LinkedIn or Email.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="https://www.linkedin.com/in/yourprofile" target="_blank" rel="noopener noreferrer" class="contact-btn linkedin-btn flex items-center justify-center px-6 py-3 bg-[#0077b5] text-white font-semibold rounded-lg hover:bg-[#005885] transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <svg class="w-5 h-5 mr-2" fill="currentColor" viewBox="0 0 24 24">
+                            <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+                        </svg>
+                        Connect on LinkedIn
+                    </a>
+                    <a href="mailto:your.email@example.com" class="contact-btn email-btn flex items-center justify-center px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path>
+                        </svg>
+                        Send Email
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Beyond the Desk Section -->
+        <div class="mt-8 sm:mt-12">
+            <div class="bg-gradient-to-br from-emerald-50 via-teal-50 to-cyan-50 rounded-2xl shadow-2xl p-6 sm:p-8 md:p-12 border-2 border-emerald-200">
+                <h2 class="text-3xl sm:text-4xl font-bold text-emerald-700 mb-6 flex items-center">
+                    <svg class="w-8 h-8 mr-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+                    </svg>
+                    Beyond the Desk
+                </h2>
+                <p class="text-lg text-emerald-800 mb-6 italic">The passions and pursuits that shape who I am outside of work</p>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <!-- Soccer Card -->
+                    <div class="group p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-emerald-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-emerald-400 to-teal-500 rounded-full flex items-center justify-center mr-4 shadow-md">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+                                </svg>
+                            </div>
+                            <h5 class="text-2xl font-bold text-emerald-700">Soccer</h5>
+                        </div>
+                        <div class="pl-20">
+                            <p class="text-gray-700 leading-relaxed text-lg mb-3">
+                                <strong class="text-emerald-600">Team Leadership:</strong> Soccer has been my training ground for leadership and collaboration. On the field, I've learned to communicate effectively under pressure, make split-second decisions, and inspire teammates to perform at their best. Whether I'm playing as a midfielder orchestrating plays or as a captain motivating the team, soccer has taught me that true leadership means putting the team's success above individual glory.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-lg">
+                                The sport has instilled in me the importance of strategy, adaptability, and resilience—qualities I bring to every project and team I work with. Just as a successful soccer team requires each player to understand their role while working toward a common goal, I apply this same collaborative mindset to cross-functional teams in the workplace.
+                            </p>
+                        </div>
+                    </div>
+
+                    <!-- Photography Card -->
+                    <div class="group p-8 bg-white rounded-xl shadow-lg hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 border-l-4 border-emerald-500">
+                        <div class="flex items-center mb-4">
+                            <div class="w-16 h-16 bg-gradient-to-br from-teal-400 to-cyan-500 rounded-full flex items-center justify-center mr-4 shadow-md">
+                                <svg class="w-8 h-8 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z"></path>
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 13a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                </svg>
+                            </div>
+                            <h5 class="text-2xl font-bold text-emerald-700">Photography</h5>
+                        </div>
+                        <div class="pl-20">
+                            <p class="text-gray-700 leading-relaxed text-lg mb-3">
+                                <strong class="text-emerald-600">Attention to Detail:</strong> Photography has sharpened my eye for detail and composition. Every frame requires careful consideration of lighting, perspective, and timing—skills that translate directly to my work in product development and design. Whether I'm capturing a street scene or a landscape, I've learned to see the bigger picture while paying attention to the smallest elements that make a composition successful.
+                            </p>
+                            <p class="text-gray-700 leading-relaxed text-lg">
+                                This meticulous attention to detail extends beyond the lens. In my professional work, I apply the same level of care to user experience design, code quality, and project execution. Just as a photographer must understand their equipment, lighting conditions, and subject matter to create compelling images, I bring this same comprehensive understanding to every technical challenge I tackle.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Project Modal -->
+    <div id="projectModal" class="modal fixed inset-0 z-50 items-center justify-center bg-black bg-opacity-50 backdrop-blur-sm" style="display: none;">
+        <div class="modal-content bg-white rounded-2xl shadow-2xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="sticky top-0 bg-white border-b border-gray-200 px-6 py-4 flex items-center justify-between rounded-t-2xl">
+                <h3 id="modalTitle" class="text-2xl font-bold text-indigo-600"></h3>
+                <button id="closeModal" class="text-gray-500 hover:text-gray-700 transition-colors">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                    </svg>
+                </button>
+            </div>
+            <div class="p-6">
+                <div class="mb-6">
+                    <img id="modalImage" src="" alt="Project Screenshot" class="w-full h-64 object-cover rounded-lg border border-gray-200 bg-gray-100" loading="lazy" width="800" height="400" decoding="async">
+                </div>
+                <p id="modalDescription" class="text-lg text-gray-700 mb-6 leading-relaxed"></p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <button id="liveVisualBtn" class="flex-1 px-6 py-3 bg-gradient-to-r from-indigo-600 to-purple-600 text-white font-semibold rounded-lg hover:from-indigo-700 hover:to-purple-700 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
+                            </svg>
+                            See Live Visual
+                        </span>
+                    </button>
+                    <button id="codeSnippetBtn" class="flex-1 px-6 py-3 bg-gradient-to-r from-gray-700 to-gray-800 text-white font-semibold rounded-lg hover:from-gray-800 hover:to-gray-900 transition-all duration-300 transform hover:scale-105 shadow-lg">
+                        <span class="flex items-center justify-center">
+                            <svg class="w-5 h-5 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4"></path>
+                            </svg>
+                            View Code Snippet
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Floating Action Button -->
+    <button id="chatFAB" class="fixed bottom-6 right-6 w-16 h-16 bg-gradient-to-r from-indigo-600 to-purple-600 text-white rounded-full shadow-2xl hover:shadow-3xl transform hover:scale-110 transition-all duration-300 z-40 flex items-center justify-center">
+        <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"></path>
+        </svg>
+    </button>
+
+    <!-- Chat Window -->
+    <div id="chatWindow" class="fixed bottom-24 right-6 w-96 h-[600px] bg-white rounded-2xl shadow-2xl z-50 flex flex-col hidden transform transition-all duration-300" style="display: none;">
+        <!-- Chat Header -->
+        <div class="bg-gradient-to-r from-indigo-600 to-purple-600 text-white p-4 rounded-t-2xl flex items-center justify-between flex-shrink-0">
+            <div class="flex items-center">
+                <div class="w-10 h-10 bg-white rounded-full flex items-center justify-center mr-3">
+                    <svg class="w-6 h-6 text-indigo-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                    </svg>
+                </div>
+                <div>
+                    <h3 class="font-semibold">Recruiter Chat</h3>
+                    <p class="text-xs text-indigo-200">Ask me anything</p>
+                </div>
+            </div>
+            <button id="closeChat" class="text-white hover:text-gray-200 transition-colors">
+                <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                </svg>
+            </button>
+        </div>
+
+        <!-- Chat Messages Area - Fixed height, scrollable -->
+        <div id="chatMessages" class="flex-1 overflow-y-auto p-4 bg-gray-50 space-y-3" style="min-height: 0;">
+            <!-- Initial Welcome Message -->
+            <div class="flex justify-start mb-3">
+                <div class="bg-gray-200 text-gray-800 rounded-2xl rounded-tl-sm px-4 py-3 max-w-[85%] shadow-sm">
+                    <p class="text-sm leading-relaxed">Hi! I'm here to answer your questions. Click one of the buttons below to get started!</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Input Area - Buttons Only (Text Input Disabled) -->
+        <div id="chatInputArea" class="p-4 bg-white border-t border-gray-200 flex-shrink-0">
+            <!-- Text input is hidden/disabled - buttons only -->
+            <input type="text" id="chatTextInput" class="hidden" disabled>
+            
+            <!-- Button Container -->
+            <div id="chatButtons" class="space-y-2">
+                <button class="chat-action-btn w-full text-left px-4 py-3 bg-indigo-50 hover:bg-indigo-100 text-indigo-700 rounded-lg transition-all duration-200 text-sm font-medium shadow-sm hover:shadow-md" data-action="challenge">
+                    💥 Tell me about a challenge
+                </button>
+                <button class="chat-action-btn w-full text-left px-4 py-3 bg-purple-50 hover:bg-purple-100 text-purple-700 rounded-lg transition-all duration-200 text-sm font-medium shadow-sm hover:shadow-md" data-action="perplexity">
+                    🤔 Why are you interested in Perplexity?
+                </button>
+                <button class="chat-action-btn w-full text-left px-4 py-3 bg-teal-50 hover:bg-teal-100 text-teal-700 rounded-lg transition-all duration-200 text-sm font-medium shadow-sm hover:shadow-md" data-action="sql">
+                    💻 Show me your SQL skills
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Custom JavaScript -->
+    <script src="script.js"></script>
+</body>
+</html>
+
