@@ -255,8 +255,8 @@ document.addEventListener('DOMContentLoaded', function() {
     // Project data with comprehensive technical details including code snippets
     const projectData = {
         'hackathon-logic': {
-            title: 'Hackathon Logic',
-            description: 'Engineered a novel biometric hardware MVP from scratch during a 72-hour sprint, decoding live heart-rate signals into data-driven fan engagement insights. Orchestrated a cross-functional team fusing ML and biometric analysis to define and prioritize product features, increasing engagement recommendations by 35%. Delivered actionable analytics for Fortune 500 entertainment clients through real-time signal processing and machine learning architecture.',
+            title: 'Biometric Fan Engagement MVP (Georgia Tech AI Hackathon)',
+            description: 'Situation: Competed in the Startup Exchange AI Hackathon (Georgia Tech) under the PrizePicks and Microsoft for Startups track to solve fan engagement stagnation using biometrics. Task: Acted as a solo Full-Stack PM/Engineer to move beyond a prototype into a commercially viable Enterprise MVP within a 72-hour sprint. Action: Architected the technical MVP to define core feature boundaries, curated a proprietary dataset of 50 biometric test videos for model validation, and engineered a roadmap featuring CAC/LTV projections and ARR modeling for Enterprise scale. Result: Delivered a commercially-ready product strategy and technical proof-of-concept currently targeting Enterprise Directors for customer acquisition.',
             image: 'data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="800" height="500" viewBox="0 0 800 500"%3E%3Cdefs%3E%3ClinearGradient id="grad1" x1="0%25" y1="0%25" x2="100%25" y2="100%25"%3E%3Cstop offset="0%25" style="stop-color:%23dc2626;stop-opacity:1" /%3E%3Cstop offset="100%25" style="stop-color:%23b91c1c;stop-opacity:1" /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect fill="url(%23grad1)" width="800" height="500"/%3E%3Cg transform="translate(400, 200)"%3E%3Ccircle cx="0" cy="0" r="60" fill="white" opacity="0.95"/%3E%3Cpath d="M -25,-10 Q -25,-30 -10,-30 L 10,-30 Q 25,-30 25,-10 L 25,10 Q 25,20 15,20 L -15,20 Q -25,20 -25,10 Z" fill="%23dc2626"/%3E%3Ccircle cx="-12" cy="-15" r="5" fill="white"/%3E%3Ccircle cx="12" cy="-15" r="5" fill="white"/%3E%3Cpath d="M -15,5 Q 0,12 15,5" stroke="white" stroke-width="2" fill="none"/%3E%3Cpath d="M -80,80 L -40,40 M 80,80 L 40,40 M -40,-80 L -20,-40 M 40,-80 L 20,-40" stroke="white" stroke-width="4" opacity="0.7"/%3E%3C/g%3E%3Ctext x="50%25" y="80%25" font-family="Arial, sans-serif" font-size="28" fill="white" text-anchor="middle" font-weight="bold"%3EBIOMETRIC MVP%3C/text%3E%3Ctext x="50%25" y="88%25" font-family="Arial, sans-serif" font-size="18" fill="white" text-anchor="middle" opacity="0.9"%3EReal-time ML Analytics%3C/text%3E%3C/svg%3E',
             techStack: ['Python', 'TensorFlow', 'Flask', 'Arduino', 'SQLite', 'REST API'],
             architecture: [
@@ -579,7 +579,7 @@ def get_embedding(text):
     return np.array(response['data'][0]['embedding'])
 
 # Streamlit UI
-st.title("🤖 AI Recruitment Matching")
+st.title("AI Recruitment Matching")
 uploaded_resume = st.file_uploader("Upload Resume (PDF)", type=['pdf'])
 job_desc = st.text_area("Paste Job Description")
 
@@ -954,34 +954,35 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     const personaQuestions = {
         'pm': [
-            { text: '🚀 How did you drive 30% growth at Perplexity?', action: 'pm-perplexity-growth' },
-            { text: '💡 Tell me about building the Hackathon MVP', action: 'pm-hackathon-logic' },
-            { text: '📊 Show me your growth dashboard work', action: 'pm-growth-dashboard' },
-            { text: '🎯 Walk me through your product vision', action: 'pm-product-vision' }
+            { text: 'How did you drive 30% growth at Perplexity?', action: 'pm-perplexity-growth' },
+            { text: 'Tell me about your technical leadership at GT Hackathon', action: 'pm-hackathon-leadership' },
+            { text: 'How do you approach product-market fit for AI?', action: 'pm-product-market-fit' },
+            { text: 'Tell me about building for commercial scale quickly', action: 'pm-commercial-scale' },
+            { text: 'What is your philosophy on technical co-founding?', action: 'pm-cofounder-philosophy' }
         ],
         'consulting': [
-            { text: '💼 What did you learn at McKinsey Forward?', action: 'consulting-mckinsey' },
-            { text: '💰 Tell me about your VC fellowship experience', action: 'consulting-vc' },
-            { text: '📈 How did you pivot CampusXATL strategy?', action: 'consulting-pivot' },
-            { text: '🔍 Explain your market sizing approach', action: 'consulting-market-sizing' }
+            { text: 'What did you learn at McKinsey Forward?', action: 'consulting-mckinsey' },
+            { text: 'Tell me about your VC fellowship experience', action: 'consulting-vc' },
+            { text: 'How did you pivot CampusXATL strategy?', action: 'consulting-pivot' },
+            { text: 'Explain your market sizing approach', action: 'consulting-market-sizing' }
         ],
         'finance': [
-            { text: '💵 Walk me through a financial model you built', action: 'finance-modeling' },
-            { text: '📉 What did you learn at Barclays?', action: 'finance-barclays' },
-            { text: '🏦 Explain your deal evaluation process', action: 'finance-deals' },
-            { text: '📊 Show me your valuation experience', action: 'finance-valuation' }
+            { text: 'Walk me through a financial model you built', action: 'finance-modeling' },
+            { text: 'What did you learn at Barclays?', action: 'finance-barclays' },
+            { text: 'Explain your deal evaluation process', action: 'finance-deals' },
+            { text: 'Show me your valuation experience', action: 'finance-valuation' }
         ],
         'tech': [
-            { text: '⚡ Show me your Python/ML skills', action: 'tech-python-ml' },
-            { text: '🤖 Tell me about the AI recruitment tool', action: 'tech-ai-tool' },
-            { text: '💻 Walk me through your tech stack', action: 'tech-stack' },
-            { text: '🔧 Explain a complex technical challenge you solved', action: 'tech-challenge' }
+            { text: 'Show me your Python/ML skills', action: 'tech-python-ml' },
+            { text: 'Tell me about the AI recruitment tool', action: 'tech-ai-tool' },
+            { text: 'Walk me through your tech stack', action: 'tech-stack' },
+            { text: 'Explain a complex technical challenge you solved', action: 'tech-challenge' }
         ],
         'general': [
-            { text: '💥 Tell me about a tough challenge Jalani faced', action: 'general-challenge' },
-            { text: '🎯 What are Jalani\'s career goals?', action: 'general-goals' },
-            { text: '🌟 What makes Jalani stand out?', action: 'general-standout' },
-            { text: '📚 Tell me about Jalani\'s background', action: 'general-background' }
+            { text: 'Tell me about a tough challenge Jalani faced', action: 'general-challenge' },
+            { text: 'What are Jalani\'s career goals?', action: 'general-goals' },
+            { text: 'What makes Jalani stand out?', action: 'general-standout' },
+            { text: 'Tell me about Jalani\'s background', action: 'general-background' }
         ]
     };
     
@@ -1004,7 +1005,7 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
         const buttons = [...questions];
         if (persona && persona !== 'general') {
             buttons.push({
-                text: '⬅️ See all questions',
+                text: 'See all questions',
                 action: 'back-to-main',
                 class: 'chat-action-btn w-full text-left px-5 py-4 bg-gray-100 hover:bg-gray-200 text-gray-700 rounded-xl transition-all duration-200 font-semibold shadow-sm'
             });
@@ -1080,15 +1081,8 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
             const btn = document.createElement('button');
             btn.className = button.class || 'chat-action-btn w-full text-left px-5 py-4 bg-red-50 hover:bg-blue-700 text-red-700 hover:text-white rounded-xl transition-all duration-200 font-semibold shadow-sm hover:shadow-lg transform hover:scale-[1.02]';
             
-            // Check if button text contains emoji, format accordingly
-            if (button.text.includes('💥') || button.text.includes('🤔') || button.text.includes('💻') || button.text.includes('📊') || button.text.includes('📈') || button.text.includes('🚀') || button.text.includes('💡') || button.text.includes('🎯') || button.text.includes('💼') || button.text.includes('💰') || button.text.includes('💵') || button.text.includes('⚡') || button.text.includes('🤖') || button.text.includes('🌟') || button.text.includes('📚') || button.text.includes('⬅️') || button.text.includes('🏦') || button.text.includes('🔍') || button.text.includes('🔧') || button.text.includes('📉')) {
-                const parts = button.text.split(' ');
-                const emoji = parts[0];
-                const text = parts.slice(1).join(' ');
-                btn.innerHTML = `<div class="flex items-center gap-3"><span class="text-2xl">${emoji}</span><span>${text}</span></div>`;
-            } else {
-                btn.textContent = button.text;
-            }
+            // Simple text rendering without emoji detection
+            btn.textContent = button.text;
             
             btn.setAttribute('data-action', button.action);
             btn.addEventListener('click', () => handleButtonClick(button.action));
@@ -1131,7 +1125,7 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
         conversationState = 'main';
         updateButtons([
             {
-                text: '💥 Tell me about a tough challenge Jalani faced',
+                text: 'Tell me about a tough challenge Jalani faced',
                 action: 'challenge',
                 class: 'chat-action-btn w-full text-left px-5 py-4 bg-red-50 hover:bg-blue-700 text-red-700 hover:text-white rounded-xl transition-all duration-200 font-semibold shadow-sm hover:shadow-lg transform hover:scale-[1.02]'
             },
@@ -1141,7 +1135,7 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
                 class: 'chat-action-btn w-full text-left px-5 py-4 bg-red-50 hover:bg-blue-700 text-red-700 hover:text-white rounded-xl transition-all duration-200 font-semibold shadow-sm hover:shadow-lg transform hover:scale-[1.02]'
             },
             {
-                text: '💻 Show me his technical SQL skills',
+                text: 'Show me his technical SQL skills',
                 action: 'sql',
                 class: 'chat-action-btn w-full text-left px-4 py-3 bg-red-50 hover:bg-blue-100 text-teal-700 rounded-lg transition-all duration-200 text-sm font-medium shadow-sm hover:shadow-md'
             }
@@ -1156,6 +1150,10 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
         // PM Actions
         if (action === 'pm-perplexity-growth') handlePMPerplexityGrowth();
         else if (action === 'pm-hackathon-logic') handlePMHackathonLogic();
+        else if (action === 'pm-hackathon-leadership') handlePMHackathonLeadership();
+        else if (action === 'pm-product-market-fit') handlePMProductMarketFit();
+        else if (action === 'pm-commercial-scale') handlePMCommercialScale();
+        else if (action === 'pm-cofounder-philosophy') handlePMCofounderPhilosophy();
         else if (action === 'pm-growth-dashboard') handlePMGrowthDashboard();
         else if (action === 'pm-product-vision') handlePMProductVision();
         
@@ -1190,15 +1188,15 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // PM: Perplexity Growth
     function handlePMPerplexityGrowth() {
-        sendMessage('user', '🚀 How did you drive 30% growth at Perplexity?');
+        sendMessage('user', 'How did you drive 30% growth at Perplexity?');
         sendTypingMessage(() => {
-            sendMessage('system', `Great question! Here's how Jalani drove that impressive growth at Perplexity:\n\n**The Strategy:**\n• Launched targeted on-campus marketing campaigns\n• Built relationships with key student organizations\n• Created iterative content strategies based on user feedback\n• Focused on boosting product utility across departments\n\n**The Results:**\n📈 30% month-over-month active user growth\n🎯 Sustained engagement across multiple cohorts\n💡 Product adoption in 5+ academic departments\n\nWant to dive deeper?`);
+            sendMessage('system', `Great question! Here's how Jalani drove that impressive growth at Perplexity:\n\n**The Strategy:**\n• Launched targeted on-campus marketing campaigns\n• Built relationships with key student organizations\n• Created iterative content strategies based on user feedback\n• Focused on boosting product utility across departments\n\n**The Results:**\n30% month-over-month active user growth\nSustained engagement across multiple cohorts\nProduct adoption in 5+ academic departments\n\nWant to dive deeper?`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '📊 Show me the growth strategy details', action: 'pm-growth-strategy-details' },
-                    { text: '🎯 How did you identify the target users?', action: 'pm-target-users' },
-                    { text: '⬅️ Back to PM questions', action: 'pm-back' }
+                    { text: 'Show me the growth strategy details', action: 'pm-growth-strategy-details' },
+                    { text: 'How did you identify the target users?', action: 'pm-target-users' },
+                    { text: 'Back to PM questions', action: 'pm-back' }
                 ]);
             }, 500);
         });
@@ -1206,14 +1204,74 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // PM: Hackathon Logic
     function handlePMHackathonLogic() {
-        sendMessage('user', '💡 Tell me about building the Hackathon MVP');
+        sendMessage('user', 'Tell me about building the Hackathon MVP');
         sendTypingMessage(() => {
             sendMessage('system', `This was one of Jalani's most exciting technical projects!\n\n**The Challenge:**\nBuild a biometric hardware MVP that processes heart-rate data in real-time for fan engagement analytics.\n\n**What Jalani Built:**\n• Engineered core Python/ML logic to process biometric signals\n• Built real-time data pipeline for live analytics\n• Integrated with hardware sensors for continuous monitoring\n• Created dashboard for visualizing engagement metrics\n\n**The Impact:**\nDelivered a working prototype in 48 hours that proved feasibility for sports and entertainment applications.\n\nWant to see the code?`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '💻 View the technical details', action: 'open-project-hackathon' },
-                    { text: '⬅️ Back to PM questions', action: 'pm-back' }
+                    { text: 'View the technical details', action: 'open-project-hackathon' },
+                    { text: 'Back to PM questions', action: 'pm-back' }
+                ]);
+            }, 500);
+        });
+    }
+
+    // PM: Technical Leadership at GT Hackathon (NEW - Recruiter Mode)
+    function handlePMHackathonLeadership() {
+        sendMessage('user', 'Tell me about your technical leadership at GT Hackathon');
+        sendTypingMessage(() => {
+            sendMessage('system', `I operated at the intersection of product and engineering, personally building the MVP to de-risk the technical roadmap while simultaneously defining the ICP and Enterprise GTM strategy.\n\n**The Approach:**\n• Solo Full-Stack PM/Engineer role during 72-hour sprint\n• Built technical MVP while defining commercial strategy in parallel\n• Curated proprietary dataset of 50 biometric test videos for validation\n• Developed financial models (ARR/LTV projections) for Enterprise scale\n\n**The Philosophy:**\nI focused on building a "business engine" rather than just a feature, managing everything from biometric data curation to financial modeling (ARR/LTV) to ensure day-one commercial readiness.\n\n**Current Status:**\nThis commercially-ready product strategy is currently being pitched to Enterprise Directors for customer acquisition.`);
+            
+            setTimeout(() => {
+                updateButtons([
+                    { text: 'View the full project details', action: 'open-project-hackathon' },
+                    { text: 'Back to PM questions', action: 'pm-back' }
+                ]);
+            }, 500);
+        });
+    }
+
+    // PM: Product-Market Fit for AI (NEW - Recruiter Mode)
+    function handlePMProductMarketFit() {
+        sendMessage('user', 'How do you approach product-market fit for AI?');
+        sendTypingMessage(() => {
+            sendMessage('system', `My approach is data-driven and customer-centric.\n\n**For my biometric AI project:**\n• Personally curated a 50-video database to validate feature concepts BEFORE engineering\n• Ensured the product solved real-world engagement pain points for our ICP\n• Conducted market research to identify Enterprise Directors as primary buyers\n• Built validation into every stage of the MVP development\n\n**Key Philosophy:**\nValidate with real data first, build second. This prevents wasting engineering time on features that don't solve actual customer problems.\n\n**Result:**\nThe MVP moved directly from hackathon prototype to Enterprise-ready product because customer validation was built into the foundation.`);
+            
+            setTimeout(() => {
+                updateButtons([
+                    { text: 'Tell me about commercial scale', action: 'pm-commercial-scale' },
+                    { text: 'Back to PM questions', action: 'pm-back' }
+                ]);
+            }, 500);
+        });
+    }
+
+    // PM: Building for Commercial Scale (NEW - Recruiter Mode)
+    function handlePMCommercialScale() {
+        sendMessage('user', 'Tell me about building for commercial scale quickly');
+        sendTypingMessage(() => {
+            sendMessage('system', `During the 72-hour GT Hackathon, I acted as a Full-Stack PM to build a "business engine" rather than just a feature.\n\n**What This Meant:**\n• Balanced technical MVP development with financial modeling\n• Projected ARR and LTV to prove venture viability\n• Defined ICP and GTM strategy alongside engineering\n• Created roadmap for Enterprise adoption from day one\n\n**Technical + Business Integration:**\nMost teams build prototypes. I built a commercially viable product by treating the business model as equally important as the code.\n\n**The Outcome:**\nEnterprise partners could immediately understand the business case because the financial fundamentals were baked into the MVP from the start.`);
+            
+            setTimeout(() => {
+                updateButtons([
+                    { text: 'What about co-founding philosophy?', action: 'pm-cofounder-philosophy' },
+                    { text: 'Back to PM questions', action: 'pm-back' }
+                ]);
+            }, 500);
+        });
+    }
+
+    // PM: Co-Founder Philosophy (NEW - Recruiter Mode)
+    function handlePMCofounderPhilosophy() {
+        sendMessage('user', 'What is your philosophy on technical co-founding?');
+        sendTypingMessage(() => {
+            sendMessage('system', `I believe in building with hunger and scalability.\n\n**What I'm Looking For:**\nI am currently seeking a student technical co-founder who shares a passion for AI-driven growth engines to transform these validated MVPs into market-leading companies.\n\n**My Value as a Co-Founder:**\n• Product strategy and commercial GTM expertise\n• Experience with financial modeling and unit economics\n• Track record of shipping MVPs that solve real problems\n• Deep understanding of customer validation and ICP definition\n\n**The Vision:**\nPartner with someone who can scale the technical infrastructure while I drive product, growth, and commercial strategy. Together, we turn validated concepts into category-defining companies.\n\n**Current Projects Ready to Scale:**\nBiometric AI platform with Enterprise interest and proven customer validation.`);
+            
+            setTimeout(() => {
+                updateButtons([
+                    { text: 'Tell me about Perplexity growth', action: 'pm-perplexity-growth' },
+                    { text: 'Back to PM questions', action: 'pm-back' }
                 ]);
             }, 500);
         });
@@ -1221,14 +1279,14 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // PM: Growth Dashboard
     function handlePMGrowthDashboard() {
-        sendMessage('user', '📊 Show me your growth dashboard work');
+        sendMessage('user', 'Show me your growth dashboard work');
         sendTypingMessage(() => {
-            sendMessage('system', `Jalani built a comprehensive analytics dashboard for CampusXATL to track key growth metrics.\n\n**What it Tracked:**\n📈 User sign-ups and daily active users\n🎯 Funnel conversion rates at each stage\n💡 Retention metrics and cohort analysis\n🔥 Feature engagement and usage patterns\n\n**Technical Implementation:**\n• Built with Python and data visualization libraries\n• Real-time data updates from backend\n• Custom SQL queries for complex metrics\n• Interactive filters and date ranges\n\n**Business Impact:**\nEnabled data-driven decisions that improved conversion by 40% and retention by 25%.`);
+            sendMessage('system', `Jalani built a comprehensive analytics dashboard for CampusXATL to track key growth metrics.\n\n**What it Tracked:**\nUser sign-ups and daily active users\nFunnel conversion rates at each stage\nRetention metrics and cohort analysis\nFeature engagement and usage patterns\n\n**Technical Implementation:**\n• Built with Python and data visualization libraries\n• Real-time data updates from backend\n• Custom SQL queries for complex metrics\n• Interactive filters and date ranges\n\n**Business Impact:**\nEnabled data-driven decisions that improved conversion by 40% and retention by 25%.`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '📊 See the actual dashboard', action: 'open-project-dashboard' },
-                    { text: '⬅️ Back to PM questions', action: 'pm-back' }
+                    { text: 'See the actual dashboard', action: 'open-project-dashboard' },
+                    { text: 'Back to PM questions', action: 'pm-back' }
                 ]);
             }, 500);
         });
@@ -1236,14 +1294,14 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // PM: Product Vision
     function handlePMProductVision() {
-        sendMessage('user', '🎯 Walk me through your product vision');
+        sendMessage('user', 'Walk me through your product vision');
         sendTypingMessage(() => {
             sendMessage('system', `Jalani's product approach centers on building user-centric solutions that solve real problems.\n\n**His Philosophy:**\n• Start with deep user research and pain point identification\n• Build MVPs quickly to validate assumptions\n• Iterate based on data and feedback, not opinions\n• Scale only what's proven to work\n\n**Real Examples:**\n• CampusXATL: Pivoted entire product strategy based on user feedback, cutting launch timeline by 40%\n• Perplexity: Drove 30% MoM growth through targeted feature improvements\n\nJalani believes great products come from listening to users and moving fast.`);
             
             setTimeout(() => {
                 updateButtons([
                     { text: '📖 Tell me about the CampusXATL pivot', action: 'pm-pivot-story' },
-                    { text: '⬅️ Back to PM questions', action: 'pm-back' }
+                    { text: 'Back to PM questions', action: 'pm-back' }
                 ]);
             }, 500);
         });
@@ -1251,14 +1309,14 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // Consulting: McKinsey
     function handleConsultingMcKinsey() {
-        sendMessage('user', '💼 What did you learn at McKinsey Forward?');
+        sendMessage('user', 'What did you learn at McKinsey Forward?');
         sendTypingMessage(() => {
-            sendMessage('system', `The McKinsey Forward Learning Program was a selective global initiative that shaped Jalani's strategic thinking.\n\n**What He Learned:**\n🎯 Structured problem-solving frameworks (like MECE)\n📊 Business strategy and market analysis techniques\n💡 Digital transformation methodologies\n📈 Data-driven decision making\n\n**How He Applied It:**\nThese frameworks directly influenced his work at CampusXATL, where he used market sizing and strategic analysis to pivot the entire product strategy—cutting time-to-launch by 40%.\n\nMcKinsey taught Jalani to think like a consultant: break down complex problems, analyze systematically, and deliver actionable recommendations.`);
+            sendMessage('system', `The McKinsey Forward Learning Program was a selective global initiative that shaped Jalani's strategic thinking.\n\n**What He Learned:**\nStructured problem-solving frameworks (like MECE)\nBusiness strategy and market analysis techniques\nDigital transformation methodologies\nData-driven decision making\n\n**How He Applied It:**\nThese frameworks directly influenced his work at CampusXATL, where he used market sizing and strategic analysis to pivot the entire product strategy—cutting time-to-launch by 40%.\n\nMcKinsey taught Jalani to think like a consultant: break down complex problems, analyze systematically, and deliver actionable recommendations.`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '📈 See how he applied these frameworks', action: 'consulting-frameworks' },
-                    { text: '⬅️ Back to consulting questions', action: 'consulting-back' }
+                    { text: 'See how he applied these frameworks', action: 'consulting-frameworks' },
+                    { text: 'Back to consulting questions', action: 'consulting-back' }
                 ]);
             }, 500);
         });
@@ -1266,14 +1324,14 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // Consulting: VC Fellowship
     function handleConsultingVC() {
-        sendMessage('user', '💰 Tell me about your VC fellowship experience');
+        sendMessage('user', 'Tell me about your VC fellowship experience');
         sendTypingMessage(() => {
-            sendMessage('system', `Jalani was selected for the highly competitive Black Venture Capital Consortium (BVCC) Fellowship.\n\n**What He Mastered:**\n💼 Due diligence fundamentals and investment frameworks\n📊 Market sizing analysis and TAM calculations\n📝 Writing comprehensive investment memos\n🎯 Evaluating startup metrics and unit economics\n\n**The Program:**\nA rigorous 10-week curriculum focused on venture capital fundamentals, startup evaluation, and portfolio strategy.\n\n**Real Impact:**\nThis experience shaped how Jalani evaluates opportunities and makes strategic decisions—always thinking about market size, scalability, and sustainable growth.`);
+            sendMessage('system', `Jalani was selected for the highly competitive Black Venture Capital Consortium (BVCC) Fellowship.\n\n**What He Mastered:**\nDue diligence fundamentals and investment frameworks\nMarket sizing analysis and TAM calculations\n📝 Writing comprehensive investment memos\nEvaluating startup metrics and unit economics\n\n**The Program:**\nA rigorous 10-week curriculum focused on venture capital fundamentals, startup evaluation, and portfolio strategy.\n\n**Real Impact:**\nThis experience shaped how Jalani evaluates opportunities and makes strategic decisions—always thinking about market size, scalability, and sustainable growth.`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '📊 How do you size markets?', action: 'consulting-market-sizing' },
-                    { text: '⬅️ Back to consulting questions', action: 'consulting-back' }
+                    { text: 'How do you size markets?', action: 'consulting-market-sizing' },
+                    { text: 'Back to consulting questions', action: 'consulting-back' }
                 ]);
             }, 500);
         });
@@ -1281,14 +1339,14 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // Consulting: Pivot Strategy
     function handleConsultingPivot() {
-        sendMessage('user', '📈 How did you pivot CampusXATL strategy?');
+        sendMessage('user', 'How did you pivot CampusXATL strategy?');
         sendTypingMessage(() => {
             sendMessage('system', `This is one of Jalani's best strategic pivots!\n\n**The Problem:**\nCampusXATL's initial go-to-market strategy stalled. Traditional marketing channels were expensive and ineffective.\n\n**The Pivot:**\nJalani completely redesigned the user acquisition approach:\n• Ditched expensive paid channels\n• Built a scrappy, direct-outreach model\n• Focused on authentic, personal engagement\n• Optimized for low customer acquisition cost (CAC)\n\n**The Results:**\n✅ 100 daily sign-ups achieved\n✅ Built sustainable, low-CAC pipeline\n✅ Cut time-to-launch by 40%\n✅ Proved market viability with 170 beta users\n\nThis wasn't just a tactic change—it was a complete strategic overhaul based on data and user feedback.`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '📊 Show me the metrics', action: 'consulting-pivot-metrics' },
-                    { text: '⬅️ Back to consulting questions', action: 'consulting-back' }
+                    { text: 'Show me the metrics', action: 'consulting-pivot-metrics' },
+                    { text: 'Back to consulting questions', action: 'consulting-back' }
                 ]);
             }, 500);
         });
@@ -1296,7 +1354,7 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // General handlers for navigation
     function handleGeneralChallenge() {
-        sendMessage('user', '💥 Tell me about a tough challenge Jalani faced');
+        sendMessage('user', 'Tell me about a tough challenge Jalani faced');
         sendTypingMessage(() => {
             sendMessage('system', `Great question! Let me tell you about when Jalani had to completely pivot CampusXATL.\n\n**The Challenge:**\nThe initial go-to-market strategy hit a wall. Traditional channels were too expensive and not delivering results.\n\n**The Response:**\nInstead of giving up, Jalani designed an entirely new user acquisition approach—scrappy, direct, and authentic.\n\n**The Outcome:**\n✅ Locked in 100 daily sign-ups\n✅ Built a sustainable, low-CAC pipeline\n✅ Proved the model worked\n\nThis is the kind of strategic thinking that turns obstacles into opportunities.`);
             
@@ -1307,9 +1365,9 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     }
     
     function handleGeneralGoals() {
-        sendMessage('user', '🎯 What are Jalani\'s career goals?');
+        sendMessage('user', 'What are Jalani\'s career goals?');
         sendTypingMessage(() => {
-            sendMessage('system', `Jalani is driven by a clear vision: build products that create real impact at scale.\n\n**His Focus Areas:**\n🚀 Product Management at innovative tech companies\n💡 Working on AI/ML-powered products\n📈 Driving user growth and engagement\n🎯 Building 0-to-1 products and MVPs\n\n**What He's Looking For:**\nCompanies that move fast, ship iteratively, and put users first. He thrives in environments where data drives decisions and teams aren't afraid to pivot.\n\n**The Big Picture:**\nJalani wants to be where cutting-edge technology meets real-world problems—building products people love and use every day.`);
+            sendMessage('system', `Jalani is driven by a clear vision: build products that create real impact at scale.\n\n**His Focus Areas:**\nProduct Management at innovative tech companies\nWorking on AI/ML-powered products\nDriving user growth and engagement\nBuilding 0-to-1 products and MVPs\n\n**What He's Looking For:**\nCompanies that move fast, ship iteratively, and put users first. He thrives in environments where data drives decisions and teams aren't afraid to pivot.\n\n**The Big Picture:**\nJalani wants to be where cutting-edge technology meets real-world problems—building products people love and use every day.`);
             
             setTimeout(() => {
                 loadPersonaQuestions(currentPersona || 'general');
@@ -1318,7 +1376,7 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     }
     
     function handleGeneralStandout() {
-        sendMessage('user', '🌟 What makes Jalani stand out?');
+        sendMessage('user', 'What makes Jalani stand out?');
         sendTypingMessage(() => {
             sendMessage('system', `Great question! Here's what makes Jalani unique:\n\n**1. Multi-Disciplinary Skill Set**\n• Product Management + Strategy + Finance + Engineering\n• Can speak to executives, engineers, and customers equally well\n\n**2. Proven Track Record**\n• 30% MoM growth at Perplexity\n• 100 daily sign-ups for CampusXATL\n• McKinsey and BVCC-trained strategic thinking\n\n**3. Builder Mentality**\n• Ships working prototypes in 48 hours\n• Not afraid to get hands dirty with code\n• Data-driven but moves fast\n\n**4. Strategic Yet Scrappy**\n• Thinks like a consultant, executes like a founder\n• Comfortable with ambiguity and rapid iteration\n\nJalani doesn't just talk about ideas—he builds them, tests them, and scales what works.`);
             
@@ -1329,9 +1387,9 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     }
     
     function handleGeneralBackground() {
-        sendMessage('user', '📚 Tell me about Jalani\'s background');
+        sendMessage('user', 'Tell me about Jalani\'s background');
         sendTypingMessage(() => {
-            sendMessage('system', `Jalani brings a unique blend of experiences:\n\n**Education & Training:**\n🎓 Georgia State University\n📚 McKinsey Forward Learning Program\n💼 Black Venture Capital Consortium (BVCC) Fellow\n🏦 Barclays Investment Banking Discovery Program\n\n**Professional Experience:**\n🚀 Product & Growth at Perplexity (30% MoM growth)\n💡 Founder of CampusXATL (170 beta users)\n💻 Microsoft Ignite Competition\n\n**Core Strengths:**\n• Product Management & Growth Strategy\n• Financial Modeling & Investment Analysis\n• Full-Stack Development (Python, JavaScript, React)\n• Data-Driven Decision Making\n\nHe's built products, driven growth, analyzed markets, and written code—a true hybrid PM/engineer/strategist.`);
+            sendMessage('system', `Jalani brings a unique blend of experiences:\n\n**Education & Training:**\nGeorgia State University\nMcKinsey Forward Learning Program\nBlack Venture Capital Consortium (BVCC) Fellow\nBarclays Investment Banking Discovery Program\n\n**Professional Experience:**\nProduct & Growth at Perplexity (30% MoM growth)\nFounder of CampusXATL (170 beta users)\nMicrosoft Ignite Competition\n\n**Core Strengths:**\n• Product Management & Growth Strategy\n• Financial Modeling & Investment Analysis\n• Full-Stack Development (Python, JavaScript, React)\n• Data-Driven Decision Making\n\nHe's built products, driven growth, analyzed markets, and written code—a true hybrid PM/engineer/strategist.`);
             
             setTimeout(() => {
                 loadPersonaQuestions(currentPersona || 'general');
@@ -1342,16 +1400,16 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     // Challenge conversation flow
     function handleChallengeFlow() {
         conversationState = 'challenge';
-        const buttonText = '💥 Tell me about a tough challenge Jalani faced';
+        const buttonText = 'Tell me about a tough challenge Jalani faced';
         sendMessage('user', buttonText);
         
         sendTypingMessage(() => {
-            sendMessage('system', `Ooh, great question! 😊 Let me tell you about a time when Jalani really had to think on his feet.\n\nSo, picture this: CampusXATL was hitting a wall with their initial go-to-market strategy. The traditional channels? Way too expensive and not delivering results. 😬\n\nInstead of just accepting defeat, Jalani completely flipped the script. He designed a whole new user acquisition approach—ditched the expensive lead sources and went for a scrappy, direct-outreach model. It was more personal, more authentic, and honestly? Way more effective.\n\nThe result? They locked in 100 daily sign-ups and built a sustainable, low-CAC pipeline. That's the kind of strategic pivot that turns a struggling initiative into a success story! 🚀`);
+            sendMessage('system', `Ooh, great question! Let me tell you about a time when Jalani really had to think on his feet.\n\nSo, picture this: CampusXATL was hitting a wall with their initial go-to-market strategy. The traditional channels? Way too expensive and not delivering results. 😬\n\nInstead of just accepting defeat, Jalani completely flipped the script. He designed a whole new user acquisition approach—ditched the expensive lead sources and went for a scrappy, direct-outreach model. It was more personal, more authentic, and honestly? Way more effective.\n\nThe result? They locked in 100 daily sign-ups and built a sustainable, low-CAC pipeline. That's the kind of strategic pivot that turns a struggling initiative into a success story! 🚀`);
             
             setTimeout(() => {
                 updateButtons([
                     {
-                        text: '📊 See the actual numbers',
+                        text: 'See the actual numbers',
                         action: 'see-metrics',
                         class: 'chat-action-btn w-full text-left px-5 py-4 bg-red-50 hover:bg-blue-700 text-red-700 hover:text-white rounded-xl transition-all duration-200 font-semibold shadow-sm hover:shadow-lg transform hover:scale-[1.02]'
                     },
@@ -1367,14 +1425,14 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // Tech: Python/ML
     function handleTechPythonML() {
-        sendMessage('user', '⚡ Show me your Python/ML skills');
+        sendMessage('user', 'Show me your Python/ML skills');
         sendTypingMessage(() => {
-            sendMessage('system', `Jalani has strong Python and Machine Learning experience!\n\n**Projects:**\n🤖 Hackathon Logic - Built ML pipeline to process biometric signals in real-time\n📊 Growth Dashboard - Python-based analytics with pandas and data visualization\n💡 AI Recruitment Tool - Integrated GPT-4 API for intelligent matching\n\n**Technical Skills:**\n• Machine Learning libraries (scikit-learn, TensorFlow basics)\n• Data analysis with pandas, numpy\n• API integrations (OpenAI, REST APIs)\n• Real-time data processing\n\n**Example:**\nFor the Hackathon MVP, Jalani engineered Python logic that processed heart-rate data, applied ML algorithms for pattern detection, and output real-time engagement scores—all in 48 hours!\n\nWant to see the code?`);
+            sendMessage('system', `Jalani has strong Python and Machine Learning experience!\n\n**Projects:**\nHackathon Logic - Built ML pipeline to process biometric signals in real-time\nGrowth Dashboard - Python-based analytics with pandas and data visualization\nAI Recruitment Tool - Integrated GPT-4 API for intelligent matching\n\n**Technical Skills:**\n• Machine Learning libraries (scikit-learn, TensorFlow basics)\n• Data analysis with pandas, numpy\n• API integrations (OpenAI, REST APIs)\n• Real-time data processing\n\n**Example:**\nFor the Hackathon MVP, Jalani engineered Python logic that processed heart-rate data, applied ML algorithms for pattern detection, and output real-time engagement scores—all in 48 hours!\n\nWant to see the code?`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '💻 View the Hackathon code', action: 'open-project-hackathon' },
-                    { text: '⬅️ Back to tech questions', action: 'tech-back' }
+                    { text: 'View the Hackathon code', action: 'open-project-hackathon' },
+                    { text: 'Back to tech questions', action: 'tech-back' }
                 ]);
             }, 500);
         });
@@ -1382,14 +1440,14 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // Tech: AI Tool
     function handleTechAITool() {
-        sendMessage('user', '🤖 Tell me about the AI recruitment tool');
+        sendMessage('user', 'Tell me about the AI recruitment tool');
         sendTypingMessage(() => {
             sendMessage('system', `This was a cutting-edge project leveraging GPT-4!\n\n**What It Does:**\nAn AI-powered recruitment platform that matches candidates with jobs based on skills, experience, and cultural fit.\n\n**Technical Implementation:**\n• Integrated GPT-4 API for natural language processing\n• Built matching algorithms considering multiple dimensions\n• Created intuitive UI for both recruiters and candidates\n• Real-time scoring and recommendations\n\n**The Innovation:**\nInstead of just keyword matching, the system uses AI to understand context, evaluate fit, and provide intelligent recommendations—like having a smart recruiter assistant.\n\n**Impact:**\nDemonstrated how AI can transform traditional HR processes and improve hiring outcomes.`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '💻 See the implementation details', action: 'open-project-ai' },
-                    { text: '⬅️ Back to tech questions', action: 'tech-back' }
+                    { text: 'See the implementation details', action: 'open-project-ai' },
+                    { text: 'Back to tech questions', action: 'tech-back' }
                 ]);
             }, 500);
         });
@@ -1397,13 +1455,13 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // Tech: Tech Stack
     function handleTechStack() {
-        sendMessage('user', '💻 Walk me through your tech stack');
+        sendMessage('user', 'Walk me through your tech stack');
         sendTypingMessage(() => {
-            sendMessage('system', `Here's what Jalani works with:\n\n**Frontend:**\n⚛️ React, JavaScript/TypeScript\n🎨 Tailwind CSS, modern UI frameworks\n📱 Responsive design principles\n\n**Backend:**\n🐍 Python (Flask, FastAPI)\n🗄️ SQL databases (PostgreSQL, MySQL)\n🔌 RESTful API design\n\n**Data & ML:**\n📊 pandas, numpy for data analysis\n🤖 scikit-learn, basic TensorFlow\n📈 Data visualization (Plotly, Matplotlib)\n\n**Tools & Platforms:**\n☁️ Cloud deployment basics\n🔧 Git/GitHub for version control\n🚀 Agile development workflows\n\n**Philosophy:**\nJalani chooses tools based on the problem, not the hype. He's pragmatic—uses what ships fast and scales well.`);
+            sendMessage('system', `Here's what Jalani works with:\n\n**Frontend:**\n⚛️ React, JavaScript/TypeScript\n🎨 Tailwind CSS, modern UI frameworks\n📱 Responsive design principles\n\n**Backend:**\n🐍 Python (Flask, FastAPI)\n🗄️ SQL databases (PostgreSQL, MySQL)\n🔌 RESTful API design\n\n**Data & ML:**\npandas, numpy for data analysis\nscikit-learn, basic TensorFlow\nData visualization (Plotly, Matplotlib)\n\n**Tools & Platforms:**\n☁️ Cloud deployment basics\nGit/GitHub for version control\nAgile development workflows\n\n**Philosophy:**\nJalani chooses tools based on the problem, not the hype. He's pragmatic—uses what ships fast and scales well.`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '⬅️ Back to tech questions', action: 'tech-back' }
+                    { text: 'Back to tech questions', action: 'tech-back' }
                 ]);
             }, 500);
         });
@@ -1411,14 +1469,14 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // Tech: Challenge
     function handleTechChallenge() {
-        sendMessage('user', '🔧 Explain a complex technical challenge you solved');
+        sendMessage('user', 'Explain a complex technical challenge you solved');
         sendTypingMessage(() => {
             sendMessage('system', `Great question! Here's a tough one Jalani tackled:\n\n**The Problem:**\nBuilding real-time biometric processing for the Hackathon MVP with hardware constraints and tight deadlines.\n\n**The Challenges:**\n• Processing streaming data from hardware sensors\n• Applying ML algorithms with minimal latency\n• Displaying results in real-time dashboard\n• All in 48 hours!\n\n**The Solution:**\n• Designed efficient data pipeline with buffering\n• Optimized ML models for speed over perfect accuracy\n• Built lightweight visualization layer\n• Prioritized MVP features ruthlessly\n\n**The Lesson:**\nSometimes "good enough fast" beats "perfect too late." Jalani delivered a working prototype that proved the concept and impressed judges.`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '💻 See the technical implementation', action: 'open-project-hackathon' },
-                    { text: '⬅️ Back to tech questions', action: 'tech-back' }
+                    { text: 'See the technical implementation', action: 'open-project-hackathon' },
+                    { text: 'Back to tech questions', action: 'tech-back' }
                 ]);
             }, 500);
         });
@@ -1426,14 +1484,14 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // Finance: Modeling
     function handleFinanceModeling() {
-        sendMessage('user', '💵 Walk me through a financial model you built');
+        sendMessage('user', 'Walk me through a financial model you built');
         sendTypingMessage(() => {
-            sendMessage('system', `Jalani has built comprehensive financial models for various applications:\n\n**Example: Startup Valuation Model**\n📊 Revenue projections with multiple scenarios\n💰 Cash flow analysis and burn rate tracking\n📈 Valuation using DCF and comparable methods\n🎯 Sensitivity analysis for key assumptions\n\n**Technical Skills:**\n• Excel/Google Sheets with advanced formulas\n• Python for complex calculations and automation\n• Understanding of accounting principles\n• Scenario modeling and risk analysis\n\n**Real Application:**\nDuring his BVCC fellowship, Jalani built models to evaluate startups for investment—analyzing unit economics, growth potential, and capital efficiency.\n\nWant to see an example?`);
+            sendMessage('system', `Jalani has built comprehensive financial models for various applications:\n\n**Example: Startup Valuation Model**\nRevenue projections with multiple scenarios\nCash flow analysis and burn rate tracking\nValuation using DCF and comparable methods\nSensitivity analysis for key assumptions\n\n**Technical Skills:**\n• Excel/Google Sheets with advanced formulas\n• Python for complex calculations and automation\n• Understanding of accounting principles\n• Scenario modeling and risk analysis\n\n**Real Application:**\nDuring his BVCC fellowship, Jalani built models to evaluate startups for investment—analyzing unit economics, growth potential, and capital efficiency.\n\nWant to see an example?`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '📊 View a sample model', action: 'finance-model-example' },
-                    { text: '⬅️ Back to finance questions', action: 'finance-back' }
+                    { text: 'View a sample model', action: 'finance-model-example' },
+                    { text: 'Back to finance questions', action: 'finance-back' }
                 ]);
             }, 500);
         });
@@ -1441,13 +1499,13 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // Finance: Barclays
     function handleFinanceBarclays() {
-        sendMessage('user', '📉 What did you learn at Barclays?');
+        sendMessage('user', 'What did you learn at Barclays?');
         sendTypingMessage(() => {
-            sendMessage('system', `The Barclays Investment Banking Discovery Program gave Jalani exposure to high-level finance:\n\n**Key Learnings:**\n🏦 Investment banking deal structures\n📊 Financial statement analysis\n💼 M&A transaction processes\n📈 Equity and debt markets\n\n**Skills Developed:**\n• Analyzing company financials quickly\n• Understanding deal lifecycle and due diligence\n• Presenting to senior stakeholders\n• Working under tight deadlines with precision\n\n**The Impact:**\nThis experience taught Jalani to think about business from a financial lens—evaluating opportunities based on numbers, not just narrative.\n\nHe now applies this rigor to product and strategy decisions.`);
+            sendMessage('system', `The Barclays Investment Banking Discovery Program gave Jalani exposure to high-level finance:\n\n**Key Learnings:**\nInvestment banking deal structures\nFinancial statement analysis\nM&A transaction processes\nEquity and debt markets\n\n**Skills Developed:**\n• Analyzing company financials quickly\n• Understanding deal lifecycle and due diligence\n• Presenting to senior stakeholders\n• Working under tight deadlines with precision\n\n**The Impact:**\nThis experience taught Jalani to think about business from a financial lens—evaluating opportunities based on numbers, not just narrative.\n\nHe now applies this rigor to product and strategy decisions.`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '⬅️ Back to finance questions', action: 'finance-back' }
+                    { text: 'Back to finance questions', action: 'finance-back' }
                 ]);
             }, 500);
         });
@@ -1455,13 +1513,13 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // Finance: Deals
     function handleFinanceDeals() {
-        sendMessage('user', '🏦 Explain your deal evaluation process');
+        sendMessage('user', 'Explain your deal evaluation process');
         sendTypingMessage(() => {
-            sendMessage('system', `Jalani's deal evaluation framework comes from his VC and banking training:\n\n**Step 1: Market Analysis**\n📊 Total Addressable Market (TAM) sizing\n🎯 Competitive landscape assessment\n📈 Growth trajectory and trends\n\n**Step 2: Financial Due Diligence**\n💰 Unit economics and margins\n📉 Burn rate and runway\n💵 Revenue model sustainability\n\n**Step 3: Team & Execution**\n👥 Founder experience and vision\n🚀 Traction and milestones achieved\n🎯 Go-to-market strategy\n\n**Step 4: Risk Assessment**\n⚠️ Market risks, competitive threats\n💡 Technological feasibility\n📊 Financial projections reality check\n\nThis systematic approach ensures thorough evaluation before any commitment.`);
+            sendMessage('system', `Jalani's deal evaluation framework comes from his VC and banking training:\n\n**Step 1: Market Analysis**\nTotal Addressable Market (TAM) sizing\nCompetitive landscape assessment\nGrowth trajectory and trends\n\n**Step 2: Financial Due Diligence**\nUnit economics and margins\nBurn rate and runway\nRevenue model sustainability\n\n**Step 3: Team & Execution**\n👥 Founder experience and vision\nTraction and milestones achieved\nGo-to-market strategy\n\n**Step 4: Risk Assessment**\n⚠️ Market risks, competitive threats\nTechnological feasibility\nFinancial projections reality check\n\nThis systematic approach ensures thorough evaluation before any commitment.`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '⬅️ Back to finance questions', action: 'finance-back' }
+                    { text: 'Back to finance questions', action: 'finance-back' }
                 ]);
             }, 500);
         });
@@ -1469,13 +1527,13 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // Finance: Valuation
     function handleFinanceValuation() {
-        sendMessage('user', '📊 Show me your valuation experience');
+        sendMessage('user', 'Show me your valuation experience');
         sendTypingMessage(() => {
-            sendMessage('system', `Jalani learned valuation through his BVCC fellowship and applies it regularly:\n\n**Valuation Methods:**\n💰 Discounted Cash Flow (DCF)\n📊 Comparable Company Analysis\n📈 Precedent Transactions\n🎯 Venture Capital Method (for startups)\n\n**Real Application:**\nDuring his VC fellowship, Jalani valued multiple startups for investment consideration:\n• Built detailed financial models\n• Ran scenario analyses (bull/base/bear cases)\n• Presented recommendations to investment committee\n\n**Key Insight:**\nValuation is both art and science. The numbers matter, but so does understanding the story, the team, and the market opportunity.\n\nJalani balances quantitative rigor with qualitative judgment.`);
+            sendMessage('system', `Jalani learned valuation through his BVCC fellowship and applies it regularly:\n\n**Valuation Methods:**\nDiscounted Cash Flow (DCF)\nComparable Company Analysis\nPrecedent Transactions\nVenture Capital Method (for startups)\n\n**Real Application:**\nDuring his VC fellowship, Jalani valued multiple startups for investment consideration:\n• Built detailed financial models\n• Ran scenario analyses (bull/base/bear cases)\n• Presented recommendations to investment committee\n\n**Key Insight:**\nValuation is both art and science. The numbers matter, but so does understanding the story, the team, and the market opportunity.\n\nJalani balances quantitative rigor with qualitative judgment.`);
             
             setTimeout(() => {
                 updateButtons([
-                    { text: '⬅️ Back to finance questions', action: 'finance-back' }
+                    { text: 'Back to finance questions', action: 'finance-back' }
                 ]);
             }, 500);
         });
@@ -1523,7 +1581,7 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // See Metrics flow
     function handleSeeMetrics() {
-        sendMessage('user', '📊 See the actual numbers');
+        sendMessage('user', 'See the actual numbers');
         
         sendTypingMessage(() => {
             sendMessage('system', 'Alright, let\'s look at the hard data! 📊\n\nHere are the key performance indicators from that CampusXATL pivot:\n\n✅ **100 daily sign-ups** achieved\n✅ **Reduced CAC** by going direct\n✅ **Higher engagement** from authentic outreach\n✅ **Sustainable growth pipeline** established\n\nThese aren\'t just vanity metrics—they represent real users and a scalable acquisition model!', {
@@ -1540,12 +1598,12 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
         sendMessage('user', buttonText);
         
         sendTypingMessage(() => {
-            sendMessage('system', `Ah, I love this one! 💡 Jalani's pretty passionate about Perplexity, and here's why:\n\nFor him, Perplexity is where AI innovation meets real-world impact. It's not just about cool technology—it's about building products people actually use and love. That's his sweet spot! 🎯\n\nHe's already been making waves there as a Product & Growth Campus Partner, driving 30% month-over-month active user growth. The fast-paced, product-first culture? It's exactly what he thrives in. He's all about building MVPs, shipping fast, and iterating based on real user feedback.\n\nBasically, Perplexity lets him combine his product management skills with cutting-edge AI. What's not to love? 😄`);
+            sendMessage('system', `Ah, I love this one! Jalani's pretty passionate about Perplexity, and here's why:\n\nFor him, Perplexity is where AI innovation meets real-world impact. It's not just about cool technology—it's about building products people actually use and love. That's his sweet spot! 🎯\n\nHe's already been making waves there as a Product & Growth Campus Partner, driving 30% month-over-month active user growth. The fast-paced, product-first culture? It's exactly what he thrives in. He's all about building MVPs, shipping fast, and iterating based on real user feedback.\n\nBasically, Perplexity lets him combine his product management skills with cutting-edge AI. What's not to love? 😄`);
             
             setTimeout(() => {
                 updateButtons([
                     {
-                        text: '📈 Show me the growth strategy',
+                        text: 'Show me the growth strategy',
                         action: 'view-growth-strategy',
                         class: 'chat-action-btn w-full text-left px-5 py-4 bg-red-50 hover:bg-blue-700 text-red-700 hover:text-white rounded-xl transition-all duration-200 font-semibold shadow-sm hover:shadow-lg transform hover:scale-[1.02]'
                     },
@@ -1561,7 +1619,7 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     
     // View Growth Strategy flow
     function handleViewGrowthStrategy() {
-        sendMessage('user', '📈 Show me the growth strategy');
+        sendMessage('user', 'Show me the growth strategy');
         
         sendTypingMessage(() => {
             sendMessage('system', `Love this question! Here's how Jalani cracked the growth code at Perplexity: 🎯\n\n**The Approach:**\n• Launched iterative content strategies (test, learn, optimize, repeat)\n• Focused on user retention—not just acquisition\n• Boosted product utility across different departments\n• Ran strategic on-campus marketing & events\n\n**The Result:**\nSustained 30% month-over-month growth! 📈\n\nThat's the power of combining smart strategy with consistent execution. Want to see the full breakdown?`, {
@@ -1574,7 +1632,7 @@ print(f"MOIC: " + f"{returns['moic']:.2f}x")`,
     // SQL conversation flow
     function handleSQLFlow() {
         conversationState = 'sql';
-        const buttonText = '💻 Show me his technical SQL skills';
+        const buttonText = 'Show me his technical SQL skills';
         sendMessage('user', buttonText);
         
         sendTypingMessage(() => {

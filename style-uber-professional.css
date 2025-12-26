@@ -1,0 +1,645 @@
+/* ========================================
+   PROFESSIONAL PM PORTFOLIO
+   Uber Base Design System Inspired
+   ======================================== */
+
+/* TYPOGRAPHY SYSTEM - Inter Font Stack */
+:root {
+    /* Colors - High Contrast Minimalist */
+    --color-black: #000000;
+    --color-white: #FFFFFF;
+    --color-grey-50: #FAFAFA;
+    --color-grey-100: #F6F6F6;
+    --color-grey-200: #EEEEEE;
+    --color-grey-300: #E0E0E0;
+    --color-grey-700: #616161;
+    --color-grey-900: #212121;
+    --color-uber-gray-700: #545454;
+    
+    /* Typography Scale */
+    --font-body: 16px;
+    --font-headline-sm: 24px;
+    --font-headline-md: 32px;
+    --font-headline-lg: 48px;
+    --font-headline-xl: 56px;
+    
+    /* 8px Grid System */
+    --spacing-1: 8px;
+    --spacing-2: 16px;
+    --spacing-3: 24px;
+    --spacing-4: 32px;
+    --spacing-5: 40px;
+    --spacing-6: 48px;
+    --spacing-8: 64px;
+    --spacing-10: 80px;
+    --spacing-12: 96px;
+    
+    /* Border Radius - NONE for flat design */
+    --radius-sm: 0px;
+    --radius-md: 0px;
+    --radius-lg: 0px;
+}
+
+/* Base Typography */
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'SF Pro Display', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: var(--font-body);
+    font-weight: 400;
+    line-height: 1.6;
+    background-color: var(--color-white);
+    color: var(--color-grey-900);
+    letter-spacing: -0.011em;
+}
+
+/* STRICT BLACK-AND-WHITE TYPOGRAPHY HIERARCHY */
+/* All headings: font-bold tracking-tighter */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 700;
+    color: var(--color-black);
+    letter-spacing: -0.035em;
+    line-height: 1.1;
+    margin: 0;
+}
+
+h1 {
+    font-size: var(--font-headline-xl);
+    font-weight: 700;
+}
+
+h2 {
+    font-size: var(--font-headline-lg);
+    font-weight: 700;
+}
+
+h3 {
+    font-size: var(--font-headline-md);
+    font-weight: 700;
+}
+
+h4 {
+    font-size: var(--font-headline-sm);
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 18px;
+    font-weight: 700;
+}
+
+p, li, span {
+    font-weight: 400;
+    color: var(--color-uber-gray-700);
+    line-height: 1.6;
+    letter-spacing: -0.011em;
+}
+
+/* Medium weight for emphasis */
+.text-medium {
+    font-weight: 500;
+}
+
+/* Section spacing - generous white space */
+.section-spacing {
+    padding-top: var(--spacing-8);
+    padding-bottom: var(--spacing-8);
+}
+
+.section-spacing-lg {
+    padding-top: var(--spacing-12);
+    padding-bottom: var(--spacing-12);
+}
+
+/* ========================================
+   FLAT DESIGN SYSTEM (NO SHADOWS)
+   ======================================== */
+
+/* Remove all Material Design shadows */
+.flat-card {
+    background: var(--color-white);
+    border-radius: 0;
+    border: 1px solid #EEEEEE;
+    padding: var(--spacing-4);
+}
+
+/* Section backgrounds */
+.section-bg {
+    background: var(--color-grey-100);
+    border-radius: 0;
+    padding: var(--spacing-4);
+}
+
+/* ========================================
+   GEOMETRIC BUTTON SYSTEM - RHOMBUS/PARALLELOGRAM SHAPES
+   Hand-coded using CSS clip-path for intentional design
+   ======================================== */
+
+/* Primary Geometric Button - Black with White Text - RHOMBUS SHAPE */
+.btn-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-1);
+    padding: 16px 32px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 150ms ease;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    position: relative;
+}
+
+.btn-primary:hover {
+    background-color: var(--color-uber-gray-700);
+}
+
+/* Outlined Geometric Button - RHOMBUS SHAPE */
+.btn-outlined {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-1);
+    padding: 16px 32px;
+    background-color: transparent;
+    color: var(--color-black);
+    font-weight: 500;
+    font-size: 15px;
+    border: 2px solid var(--color-black);
+    cursor: pointer;
+    transition: all 150ms ease;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    position: relative;
+}
+
+.btn-outlined:hover {
+    background-color: var(--color-black);
+    color: var(--color-white);
+}
+
+/* Yellow Accent Button for High Visibility - RHOMBUS SHAPE */
+.btn-primary-yellow {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-1);
+    padding: 16px 32px;
+    background-color: var(--color-black);
+    color: #FBBF24;
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 150ms ease;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    position: relative;
+}
+
+.btn-primary-yellow:hover {
+    background-color: var(--color-uber-gray-700);
+}
+
+/* Geometric Rhombus Button - Unique Shape for Beyond the Desk */
+.btn-hexagon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    padding: 16px 32px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 150ms ease;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    position: relative;
+}
+
+.btn-hexagon:hover {
+    background-color: var(--color-uber-gray-700);
+}
+
+/* Contact Button - Rhombus Style */
+.contact-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: var(--spacing-1);
+    padding: 16px 32px;
+    background-color: var(--color-black);
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: 15px;
+    border: none;
+    cursor: pointer;
+    transition: all 150ms ease;
+    clip-path: polygon(15% 0%, 100% 0%, 85% 100%, 0% 100%);
+    text-decoration: none;
+}
+
+.contact-btn:hover {
+    background-color: var(--color-uber-gray-700);
+}
+
+/* LinkedIn specific color override */
+.linkedin-btn {
+    background-color: #0077b5;
+}
+
+.linkedin-btn:hover {
+    background-color: #005885;
+}
+
+/* Email button with yellow accent */
+.email-btn {
+    background-color: var(--color-black);
+    color: #FBBF24;
+}
+
+.email-btn:hover {
+    background-color: var(--color-uber-gray-700);
+}
+
+/* ========================================
+   LANDING PAGE - GEOMETRIC BUTTONS
+   ======================================== */
+
+#landingPage {
+    opacity: 1;
+    transition: opacity 0.3s ease;
+}
+
+.landing-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-5);
+    background: var(--color-white);
+    border: 2px solid var(--color-black);
+    color: var(--color-black);
+    cursor: pointer;
+    transition: all 150ms ease;
+    clip-path: polygon(12px 0%, 100% 0%, calc(100% - 12px) 100%, 0% 100%);
+}
+
+.landing-btn:hover {
+    background: var(--color-black);
+    color: var(--color-white);
+}
+
+.landing-btn svg {
+    stroke-width: 1.5px;
+}
+
+/* ========================================
+   NAVIGATION BAR - CLEAN MINIMAL
+   ======================================== */
+
+#mainNav {
+    background: var(--color-white);
+    border-bottom: 1px solid var(--color-grey-200);
+    transition: opacity 0.3s ease;
+}
+
+#mainContent {
+    transition: opacity 0.3s ease;
+}
+
+/* ========================================
+   PROJECT SHOWCASE - FLAT GRID
+   ======================================== */
+
+.project-card {
+    background: var(--color-white);
+    border: 1px solid #EEEEEE;
+    padding: var(--spacing-4);
+    transition: border-color 150ms ease;
+    cursor: pointer;
+}
+
+.project-card:hover {
+    border-color: var(--color-black);
+}
+
+.project-icon-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 120px;
+    background: var(--color-grey-100);
+    margin-bottom: var(--spacing-2);
+}
+
+.project-icon-container svg {
+    width: 48px;
+    height: 48px;
+    stroke-width: 1.5px;
+    color: var(--color-black);
+}
+
+/* Impact Metrics Emphasis */
+.metric-highlight {
+    display: inline-block;
+    font-weight: 700;
+    color: var(--color-black);
+    font-size: 18px;
+    background: var(--color-grey-100);
+    padding: 2px 8px;
+}
+
+/* Large Project Metrics */
+.project-metric {
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--color-black);
+    line-height: 1;
+    margin-bottom: 8px;
+    letter-spacing: -0.02em;
+}
+
+/* ========================================
+   ICON SYSTEM - CLEAN SVG LINE ICONS
+   ======================================== */
+
+.icon-line {
+    stroke-width: 1.5px;
+    fill: none;
+}
+
+.icon-sm {
+    width: 20px;
+    height: 20px;
+}
+
+.icon-md {
+    width: 24px;
+    height: 24px;
+}
+
+.icon-lg {
+    width: 32px;
+    height: 32px;
+}
+
+/* Replace colorful icons with black line icons */
+.icon-black {
+    color: var(--color-black);
+    stroke: var(--color-black);
+}
+
+/* ========================================
+   LIST STYLING - CLEAN CHECKMARKS
+   ======================================== */
+
+.list-clean {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.list-clean li {
+    display: flex;
+    align-items: flex-start;
+    gap: var(--spacing-2);
+    margin-bottom: var(--spacing-3);
+}
+
+.list-clean li svg {
+    flex-shrink: 0;
+    width: 20px;
+    height: 20px;
+    stroke-width: 2px;
+    margin-top: 2px;
+}
+
+/* ========================================
+   BEYOND THE DESK - VERTICAL STACK LAYOUT
+   ======================================== */
+
+/* Responsive Grid for Beyond the Desk */
+.beyond-desk-responsive-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+}
+
+@media (max-width: 768px) {
+    .beyond-desk-responsive-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Legacy classes - kept for backward compatibility but not used */
+.beyond-desk-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--spacing-4);
+}
+
+@media (max-width: 768px) {
+    .beyond-desk-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.beyond-card {
+    background: var(--color-white);
+    border: 1px solid #EEEEEE;
+    border-radius: 0;
+    padding: 48px;
+    display: flex;
+    flex-direction: row;
+    gap: var(--spacing-6);
+    align-items: center;
+}
+
+.beyond-photo-placeholder {
+    width: 50%;
+    min-height: 400px;
+    background: var(--color-grey-100);
+    border-radius: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.beyond-content {
+    width: 50%;
+    padding: 0;
+}
+
+@media (max-width: 768px) {
+    .beyond-card {
+        flex-direction: column;
+    }
+    .beyond-photo-placeholder,
+    .beyond-content {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   PERSONA ICON CONTAINER
+   ======================================== */
+
+#selectedPersonaIcon {
+    background-color: var(--color-black);
+    border-radius: 0;
+}
+
+/* ========================================
+   MODAL SYSTEM
+   ======================================== */
+
+.modal {
+    backdrop-filter: blur(4px);
+}
+
+.modal-header {
+    background: var(--color-black);
+    color: var(--color-white);
+    border-radius: var(--radius-lg) var(--radius-lg) 0 0;
+}
+
+.modal-content {
+    background: var(--color-white);
+    border-radius: var(--radius-lg);
+}
+
+/* ========================================
+   UTILITY CLASSES - 8PX GRID
+   ======================================== */
+
+.p-1 { padding: var(--spacing-1); }
+.p-2 { padding: var(--spacing-2); }
+.p-3 { padding: var(--spacing-3); }
+.p-4 { padding: var(--spacing-4); }
+.p-5 { padding: var(--spacing-5); }
+.p-6 { padding: var(--spacing-6); }
+.p-8 { padding: var(--spacing-8); }
+
+.m-1 { margin: var(--spacing-1); }
+.m-2 { margin: var(--spacing-2); }
+.m-3 { margin: var(--spacing-3); }
+.m-4 { margin: var(--spacing-4); }
+.m-5 { margin: var(--spacing-5); }
+.m-6 { margin: var(--spacing-6); }
+.m-8 { margin: var(--spacing-8); }
+
+.mb-1 { margin-bottom: var(--spacing-1); }
+.mb-2 { margin-bottom: var(--spacing-2); }
+.mb-3 { margin-bottom: var(--spacing-3); }
+.mb-4 { margin-bottom: var(--spacing-4); }
+.mb-6 { margin-bottom: var(--spacing-6); }
+.mb-8 { margin-bottom: var(--spacing-8); }
+
+.mt-1 { margin-top: var(--spacing-1); }
+.mt-2 { margin-top: var(--spacing-2); }
+.mt-3 { margin-top: var(--spacing-3); }
+.mt-4 { margin-top: var(--spacing-4); }
+.mt-6 { margin-top: var(--spacing-6); }
+.mt-8 { margin-top: var(--spacing-8); }
+
+.gap-1 { gap: var(--spacing-1); }
+.gap-2 { gap: var(--spacing-2); }
+.gap-3 { gap: var(--spacing-3); }
+.gap-4 { gap: var(--spacing-4); }
+
+/* ========================================
+   TEXT UTILITIES
+   ======================================== */
+
+.text-black { color: var(--color-black); }
+.text-grey-700 { color: var(--color-grey-700); }
+.text-grey-900 { color: var(--color-grey-900); }
+.text-uber-gray-700 { color: var(--color-uber-gray-700); }
+
+.tracking-tight { letter-spacing: -0.025em; }
+.leading-relaxed { line-height: 1.625; }
+
+.bg-white { background-color: var(--color-white); }
+.bg-grey-50 { background-color: var(--color-grey-50); }
+.bg-grey-100 { background-color: var(--color-grey-100); }
+
+.border-black { border-color: var(--color-black); }
+.border-grey-200 { border-color: var(--color-grey-200); }
+
+/* ========================================
+   RESPONSIVE TYPOGRAPHY
+   ======================================== */
+
+@media (max-width: 768px) {
+    h1 {
+        font-size: 40px;
+    }
+    
+    h2 {
+        font-size: 32px;
+    }
+    
+    h3 {
+        font-size: 24px;
+    }
+    
+    .section-spacing-lg {
+        padding-top: var(--spacing-6);
+        padding-bottom: var(--spacing-6);
+    }
+}
+
+/* ========================================
+   CHAT WIDGET STYLES
+   ======================================== */
+
+#aiConsultantAvatar {
+    display: none;
+}
+
+#chatModal {
+    backdrop-filter: blur(8px);
+}
+
+#chatModalContainer {
+    border: 1px solid var(--color-grey-200);
+}
+
+/* ========================================
+   ACCESSIBILITY
+   ======================================== */
+
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+.sr-only:focus {
+    position: static;
+    width: auto;
+    height: auto;
+    padding: inherit;
+    margin: inherit;
+    overflow: visible;
+    clip: auto;
+    white-space: normal;
+}
+
+/* Focus visible for keyboard navigation */
+*:focus-visible {
+    outline: 2px solid var(--color-black);
+    outline-offset: 2px;
+}
